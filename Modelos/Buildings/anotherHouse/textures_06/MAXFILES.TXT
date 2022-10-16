@@ -1,0 +1,12 @@
+﻿G:\XMAS Special\40 MAX\Assets\houses low detail\Haus 06\t$m$p$$$\textures 06.max
+G:\XMAS Special\40 MAX\Assets\houses low detail\Haus 06\t$m$p$$$\MAXFILES.TXT
+C:\Users\Simon\Desktop\temp.fgm
+H:\Bilder\TEXTURES\Holz wood\waende\DSC_6435 Stuebing01.jpg
+H:\Bilder\TEXTURES\Dächer\DSC_6252_dunkler tileable.jpg
+H:\Bilder\TEXTURES\Beton - Putze - concrete - asphalt\DSC_9202.jpg
+H:\Bilder\TEXTURES\architectural details\tueren, tore\DSC_9366 EINZELTUER.jpg
+H:\Bilder\TEXTURES\architectural details\tueren, tore\DSC_9366 EINZELTUER bump.jpg
+H:\Bilder\TEXTURES\Holz wood\waende\DSC_6435 Stuebing02.jpg
+H:\Bilder\TEXTURES\Steine_rocks\stone walls\stone wall02 Stuebing.jpg
+H:\Bilder\TEXTURES\architectural details\fenster\fenster medium.jpg
+H:\Bilder\TEXTURES\architectural details\fenster\fenster medium ref.gif
