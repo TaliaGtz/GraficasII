@@ -67,7 +67,7 @@ public:
 		this->ancho = ancho;
 		this->alto = alto;
 		//aqui cargamos las texturas de alturas y el cesped
-		CargaParametros(L"vckmabus_2K_Albedo.jpg", L"Assets/Terreno/noSpecMap.jpg", 100.0f);	//Mapa de color, Mapa de alturas, tile	Terreno.png	noSpecMap.jpg
+		CargaParametros(L"vckmabus_2K_Albedo.jpg", L"Assets/Terreno/Terreno.png", 100.0f);	//Mapa de color, Mapa de alturas, tile	Terreno.png	noSpecMap.jpg
 		//El blendMap está por la línea 250
 	}
 

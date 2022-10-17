@@ -78,8 +78,8 @@ public:
 		izqder = 0;
 		arriaba = 0;
 		billCargaFuego();
-		camara = new Camara(D3DXVECTOR3(0,80,6), D3DXVECTOR3(0,80,0), D3DXVECTOR3(0,1,0), Ancho, Alto);
-		terreno = new TerrenoRR(300, 300, d3dDevice, d3dContext);
+		camara = new Camara(D3DXVECTOR3(0,120,70), D3DXVECTOR3(0,40,0), D3DXVECTOR3(0,10,0), Ancho, Alto);
+		terreno = new TerrenoRR(1500, 1500, d3dDevice, d3dContext);
 		skydome = new SkyDome(32, 32, 100.0f, &d3dDevice, &d3dContext, L"Assets/Skydome/skydome.jpg");
 		billboard = new BillboardRR(L"Assets/Billboards/fuego-anim.png",L"Assets/Billboards/fuego-anim-normal.png", d3dDevice, d3dContext, 5);
 		model = new ModeloRR(d3dDevice, d3dContext, "Assets/Cofre/Cofre.obj", L"Assets/Cofre/Cofre-color.png", L"Assets/Cofre/Cofre-spec.png", 0, 0);
@@ -267,8 +267,8 @@ public:
 		float clearColor[4] = { 0, 0, 0, 1.0f };
 		d3dContext->ClearRenderTargetView( backBufferTarget, clearColor );
 		d3dContext->ClearDepthStencilView( depthStencilView, D3D11_CLEAR_DEPTH, 1.0f, 0 );
-		camara->posCam.y = terreno->Superficie(camara->posCam.x, camara->posCam.z) + 5;
-		camara->posCam3P.y = terreno->Superficie(camara->posCam.x, camara->posCam.z) + 6;
+		camara->posCam.y = terreno->Superficie(camara->posCam.x, camara->posCam.z) + 5.5;
+		camara->posCam3P.y = terreno->Superficie(camara->posCam.x, camara->posCam.z) + 7;
 		camara->UpdateCam(vel, arriaba, izqder, camType);
 		skydome->Update(camara->vista, camara->proyeccion);
 
@@ -280,10 +280,10 @@ public:
 		terreno->Draw(camara->vista, camara->proyeccion);
 		//TurnOnAlphaBlending();
 		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-11, -78, 4, 5, uv1, uv2, uv3, uv4, frameBillboard);
+			-11, -78, 7, 5, uv1, uv2, uv3, uv4, frameBillboard);
 
 		//TurnOffAlphaBlending();
-		model->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, camType, false);
+		//model->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, camType, false);
 		coche->setPosX(camara->hdveo.x);
 		coche->setPosZ(camara->hdveo.z);
 		coche->Draw(camara->vista, camara->proyeccion, terreno->Superficie(coche->getPosX(), coche->getPosZ()) + 2.9, camara->posCam, 1.0f, rotCam + XM_PI, 'Y', 1.5, camType, true);
