@@ -40,12 +40,22 @@ public:
 
 	int frameBillboard;
 
+	//Mi terreno
 	TerrenoRR *terreno;
+
+	//Mi Skydome
 	SkyDome *skydome;
+
+	//Mis Billboards
 	BillboardRR *billboard;
+
+	//Mi Camara
 	Camara *camara;
+
+	//Mis modelos
 	ModeloRR* model;
 	ModeloRR* coche;
+	ModeloRR* zombi;
 	
 	float izqder;
 	float arriaba;
@@ -84,7 +94,7 @@ public:
 		billboard = new BillboardRR(L"Assets/Billboards/fuego-anim.png",L"Assets/Billboards/fuego-anim-normal.png", d3dDevice, d3dContext, 5);
 		model = new ModeloRR(d3dDevice, d3dContext, "Assets/Cofre/Cofre.obj", L"Assets/Cofre/Cofre-color.png", L"Assets/Cofre/Cofre-spec.png", 0, 0);
 		coche = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Truck/Truck2.obj", L"Assets/Modelos/Truck/Truck_diff.jpg", L"Assets/Modelos/Truck/Truck_spec.jpg", 0, 0);
-
+		zombi = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/zombie/Zombi.obj", L"Assets/Modelos/zombie/Zombie.png", L"Assets/Modelos/zombie/Zombie_gloss.png", 0, 0);
 		//camType = true;	//Primera persona = true
 		
 		rotCam = 0.0;
@@ -287,7 +297,7 @@ public:
 		coche->setPosX(camara->hdveo.x);
 		coche->setPosZ(camara->hdveo.z);
 		coche->Draw(camara->vista, camara->proyeccion, terreno->Superficie(coche->getPosX(), coche->getPosZ()) + 2.9, camara->posCam, 1.0f, rotCam + XM_PI, 'Y', 1.5, camType, true);
-
+		zombi->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 0.7, camType, false);
 		swapChain->Present( 1, 0 );
 	}
 
