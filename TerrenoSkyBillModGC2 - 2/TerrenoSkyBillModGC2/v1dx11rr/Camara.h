@@ -91,16 +91,16 @@ public:
 		rotacion = giraRight;
 
 		//ajustamos la matriz de vista con lo obtenido
-		posCam += refFront * vel/10.0;
+		posCam += refFront * vel / 10.0;
 		posCam3P += refFront * vel / 10.0;
 
 		//PrimeraPersona
-		hdveo = posCam + refFront;
-		D3DXMatrixLookAtLH(&vistaPrev, &posCam, &hdveo, &refUp);
+		//hdveo = posCam + refFront;
+		//D3DXMatrixLookAtLH(&vistaPrev, &posCam, &hdveo, &refUp);
 
 		//Tercera Persona
-		//hdveo = posCam3P + refFront;
-		//D3DXMatrixLookAtLH(&vistaPrev, &posCam3P, &hdveo, &refUp);
+		hdveo = posCam3P + refFront;
+		D3DXMatrixLookAtLH(&vistaPrev, &posCam3P, &hdveo, &refUp);
 
 		D3DXMatrixMultiply(&vista, &vista, &vistaPrev);
 
