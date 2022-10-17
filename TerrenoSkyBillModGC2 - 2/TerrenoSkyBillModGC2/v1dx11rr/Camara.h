@@ -54,7 +54,7 @@ public:
 		
 	}
 
-	D3DXMATRIX UpdateCam(float vel, float arriaba, float izqder)
+	D3DXMATRIX UpdateCam(float vel, float arriaba, float izqder, bool camType)
 	{
 		D3DXMATRIX  vistaPrev = vista;
 		D3DXMatrixTranslation(&vista, 0, 0, 0);
@@ -94,13 +94,16 @@ public:
 		posCam += refFront * vel / 10.0;
 		posCam3P += refFront * vel / 10.0;
 
-		//PrimeraPersona
-		//hdveo = posCam + refFront;
-		//D3DXMatrixLookAtLH(&vistaPrev, &posCam, &hdveo, &refUp);
-
-		//Tercera Persona
-		hdveo = posCam3P + refFront;
-		D3DXMatrixLookAtLH(&vistaPrev, &posCam3P, &hdveo, &refUp);
+		if (camType == true) {
+			//PrimeraPersona
+			hdveo = posCam + refFront;
+			D3DXMatrixLookAtLH(&vistaPrev, &posCam, &hdveo, &refUp);
+		}
+		else {
+			//Tercera Persona
+			hdveo = posCam3P + refFront;
+			D3DXMatrixLookAtLH(&vistaPrev, &posCam3P, &hdveo, &refUp);
+		}
 
 		D3DXMatrixMultiply(&vista, &vista, &vistaPrev);
 

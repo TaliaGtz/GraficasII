@@ -47,6 +47,22 @@ void createKeyboardDevice(HWND hWnd) {
 
 }
 
+bool Vista(bool camType) {
+    char keyboardData[256];
+    m_pKeyboardDevice->GetDeviceState(sizeof(keyboardData), (void*)&keyboardData);
+
+    if (keyboardData[DIK_X] & 0x80) {
+        if (camType == false) {
+            camType = true;	    //Primera persona = true
+        }
+        else {
+            camType = false;	//Tercera persona = false
+        }
+    }
+
+    return camType;
+}
+
 int WINAPI WinMain(HINSTANCE hInstance,
                    HINSTANCE hPrevInstance,
                    LPSTR lpCmdLine,
@@ -185,7 +201,6 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
                 dxrr->vel = -5.f;
             }
 
-
             if (keyboardData[DIK_W] & 0x80) {
                 dxrr->vel = 5.f;
             }
@@ -238,6 +253,3 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
 
     return DefWindowProc (hWnd, message, wParam, lParam);
 }
-
-
-

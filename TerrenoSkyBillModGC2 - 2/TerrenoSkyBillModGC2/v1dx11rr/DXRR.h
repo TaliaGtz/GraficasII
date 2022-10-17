@@ -57,7 +57,7 @@ public:
 	XACTINDEX cueIndex;
 	CXACT3Util m_XACT3;
 
-	bool camType;
+	bool camType = true;
 	float rotCam;
 	
     DXRR(HWND hWnd, int Ancho, int Alto)
@@ -83,7 +83,10 @@ public:
 		model = new ModeloRR(d3dDevice, d3dContext, "Assets/Cofre/Cofre.obj", L"Assets/Cofre/Cofre-color.png", L"Assets/Cofre/Cofre-spec.png", 0, 0);
 		coche = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Truck/Truck2.obj", L"Assets/Modelos/Truck/Truck_diff.jpg", L"Assets/Modelos/Truck/Truck_spec.jpg", 0, 0);
 		
-		camType = false;	//Primera persona
+		camType = Vista(camType);
+
+		//camType = true;	//Primera persona = true
+		
 		rotCam = 0.0;
 	}
 
@@ -266,7 +269,7 @@ public:
 		d3dContext->ClearDepthStencilView( depthStencilView, D3D11_CLEAR_DEPTH, 1.0f, 0 );
 		camara->posCam.y = terreno->Superficie(camara->posCam.x, camara->posCam.z) + 5;
 		camara->posCam3P.y = terreno->Superficie(camara->posCam.x, camara->posCam.z) + 6;
-		camara->UpdateCam(vel, arriaba, izqder);
+		camara->UpdateCam(vel, arriaba, izqder, camType);
 		skydome->Update(camara->vista, camara->proyeccion);
 
 		float camPosXZ[2] = { camara->posCam.x, camara->posCam.z };
