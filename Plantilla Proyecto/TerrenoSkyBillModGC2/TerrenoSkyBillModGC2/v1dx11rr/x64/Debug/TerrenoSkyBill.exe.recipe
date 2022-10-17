@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>D:\UANL\7mo Semestre\Gráficas Computacionales II\Plantilla Proyecto\TerrenoSkyBillModGC2\TerrenoSkyBillModGC2\x64\Debug\TerrenoSkyBill.exe</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles>
+    <ContentFile>
+      <FullPath>D:\UANL\7mo Semestre\Gráficas Computacionales II\Plantilla Proyecto\TerrenoSkyBillModGC2\TerrenoSkyBillModGC2\x64\Debug\Billboard.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>D:\UANL\7mo Semestre\Gráficas Computacionales II\Plantilla Proyecto\TerrenoSkyBillModGC2\TerrenoSkyBillModGC2\x64\Debug\Modelo.cso</FullPath>
+    </ContentFile>
+  </ContentFiles>
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>
