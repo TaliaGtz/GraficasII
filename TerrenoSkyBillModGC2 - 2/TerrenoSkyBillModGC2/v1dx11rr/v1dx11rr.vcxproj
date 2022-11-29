@@ -157,6 +157,7 @@
     <ClCompile Include="XACT3Util.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Assets\Texto\Text.h" />
     <ClInclude Include="Billboard.h" />
     <ClInclude Include="Camara.h" />
     <ClInclude Include="DXRR.h" />
@@ -174,6 +175,9 @@
     <Text Include="SkyDome.fx" />
   </ItemGroup>
   <ItemGroup>
+    <FxCompile Include="Assets\Texto\Text.fx">
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+    </FxCompile>
     <FxCompile Include="Billboard.hlsl" />
     <FxCompile Include="Modelo.fx" />
   </ItemGroup>

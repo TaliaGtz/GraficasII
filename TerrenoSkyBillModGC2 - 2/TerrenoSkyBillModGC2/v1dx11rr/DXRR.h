@@ -11,7 +11,7 @@
 #include "ModeloRR.h"
 #include "XACT3Util.h"
 #include <dinput.h>
-
+#include "Text.h"
 
 class DXRR{	
 
@@ -52,6 +52,9 @@ public:
 	//Mi Camara
 	Camara *camara;
 
+	//Mi Texto
+	Text* texto;
+
 	//Mis modelos
 	ModeloRR* model;
 	ModeloRR* coche;
@@ -64,6 +67,7 @@ public:
 	float izqder;
 	float arriaba;
 	float vel;
+	float segundos;
 	bool breakpoint;
 	vector2 uv1[32];
 	vector2 uv2[32];
@@ -92,6 +96,7 @@ public:
 		izqder = 0;
 		arriaba = 0;
 		billCargaFuego();
+		segundos = 301;
 		camara = new Camara(D3DXVECTOR3(0,120,70), D3DXVECTOR3(0,40,0), D3DXVECTOR3(0,10,0), Ancho, Alto);
 		terreno = new TerrenoRR(1500, 1500, d3dDevice, d3dContext);
 		skydome = new SkyDome(32, 32, 100.0f, &d3dDevice, &d3dContext, L"Assets/Skydome/skydome.jpg");
@@ -106,6 +111,9 @@ public:
 
 		//camType = true;	//Primera persona = true
 		
+		//Texto
+		texto = new Text(d3dDevice, d3dContext, 3.6, 1.2, L"Assets/Texto/font.jpg", XMFLOAT4(0.0f, 1.0f, 0.0f, 1.0f));
+
 		rotCam = 0.0;
 	}
 
@@ -297,12 +305,15 @@ public:
 		skydome->Render(camara->posCam);
 		TurnOnDepth();
 		terreno->Draw(camara->vista, camara->proyeccion);
-		//TurnOnAlphaBlending();
+		
 		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
 			-11, -78, 7, 5, uv1, uv2, uv3, uv4, frameBillboard);
 
-		//TurnOffAlphaBlending();
-		//model->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, camType, false);
+		//Texto 
+		TurnOnAlphaBlending();
+		texto->DrawText(-0.9, 0.9, "Puntuacion:", 0.01);
+		texto->DrawText(-0.9, 0.8, "Tiempo: " + texto->Time(segundos), 0.01);
+		segundos -= 0.005;
 		coche->setPosX(camara->hdveo.x);
 		coche->setPosZ(camara->hdveo.z);
 		coche->Draw(camara->vista, camara->proyeccion, terreno->Superficie(coche->getPosX(), coche->getPosZ()) + 2.9, camara->posCam, 1.0f, rotCam + XM_PI, 'Y', 1.5, camType, true);

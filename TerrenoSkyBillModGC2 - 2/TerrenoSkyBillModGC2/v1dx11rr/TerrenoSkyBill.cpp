@@ -99,7 +99,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
                           NULL);
 
     ShowWindow(hWnd, nCmdShow);
-	dxrr = new DXRR(hWnd, 800, 600);
+	dxrr = new DXRR(hWnd, 1080, 720);
 	dxrr->vel=0;
     gamePad = new GamePadRR(1);
 
