@@ -314,11 +314,11 @@ public:
 		
 		//Billboards
 		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-11, -78, 7, 5, uv1, uv2, uv3, uv4, frameBillboard,true);
+			-11, -77.9, 4, 3, uv1, uv2, uv3, uv4, frameBillboard,true);
 		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
 			-33, -78, 0, 20, uv1, uv2, uv3, uv4, frameBillboard,false);
 		Bote->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-11, -78, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-11, -78, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
 
 		//Texto 
 		TurnOnAlphaBlending();
