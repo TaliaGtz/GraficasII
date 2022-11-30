@@ -68,6 +68,9 @@ public:
 	ModeloRR* casaPerro;
 	ModeloRR* sign;
 	ModeloRR* suministros;
+	ModeloRR* gasolinera;
+	ModeloRR* hangar;
+	ModeloRR* edificio;
 	
 	float izqder;
 	float arriaba;
@@ -120,6 +123,9 @@ public:
 		casaPerro = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/CasaPerro/CasaPerro.obj", L"Assets/Modelos/CasaPerro/doghouse0908_PBR_BaseColor.png", L"Assets/Modelos/CasaPerro/doghouse0908_PBR_AO.png", 120, 0);
 		sign = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Sign/Sign.obj", L"Assets/Modelos/Sign/sign_base_1.png", L"Assets/Modelos/Sign/sign_specular.png", 160, 0);
 		suministros = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Suministros/Suministros.obj", L"Assets/Modelos/Suministros/BaseColor.png", L"Assets/Modelos/Suministros/SumEspec.png", 180, 0);
+		gasolinera = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Gasolinera/gasolinera.obj", L"Assets/Modelos/Gasolinera/gasolinera.jpeg", L"Assets/Modelos/Gasolinera/gasolineraSpec.jpg", -200, -80);
+		hangar = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Hangar/Hangar.obj", L"Assets/Modelos/Hangar/Hangar.png", L"Assets/Modelos/Hangar/HangarSpec.jpg", -150, 30);
+		edificio = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Edificio/Edificio.obj", L"Assets/Modelos/Edificio/Edificio.jpeg", L"Assets/Modelos/Edificio/EdificioSpec.jpg", 70, 100);
 
 		//camType = true;	//Primera persona = true
 		
@@ -346,6 +352,9 @@ public:
 		casaPerro->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 3.0, camType, false);
 		sign->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.0, camType, false);
 		suministros->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 0.09, camType, false);
+		gasolinera->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 6, camType, false);
+		hangar->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 5, camType, false);
+		edificio->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 6, camType, false);
 
 		swapChain->Present( 1, 0 );
 	}
