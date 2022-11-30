@@ -48,6 +48,7 @@ public:
 
 	//Mis Billboards
 	BillboardRR *billboard;
+	BillboardRR* miArbol;
 
 	//Mi Camara
 	Camara *camara;
@@ -100,7 +101,10 @@ public:
 		camara = new Camara(D3DXVECTOR3(0,120,70), D3DXVECTOR3(0,40,0), D3DXVECTOR3(0,10,0), Ancho, Alto);
 		terreno = new TerrenoRR(1500, 1500, d3dDevice, d3dContext);
 		skydome = new SkyDome(32, 32, 100.0f, &d3dDevice, &d3dContext, L"Assets/Skydome/skydome.jpg");
+		//Billboards
 		billboard = new BillboardRR(L"Assets/Billboards/fuego-anim.png",L"Assets/Billboards/fuego-anim-normal.png", d3dDevice, d3dContext, 5);
+		miArbol = new BillboardRR(L"Assets/Billboards/arbolSeco.png", L"Assets/Billboards/arbolSecoNormal.png", d3dDevice, d3dContext, 10);
+		//Models
 		model = new ModeloRR(d3dDevice, d3dContext, "Assets/Cofre/Cofre.obj", L"Assets/Cofre/Cofre-color.png", L"Assets/Cofre/Cofre-spec.png", 0, 0);
 		coche = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Truck/Truck2.obj", L"Assets/Modelos/Truck/Truck_diff.jpg", L"Assets/Modelos/Truck/Truck_spec.jpg", 0, 0);
 		zombi = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/zombie/Zombi.obj", L"Assets/Modelos/zombie/Zombie.png", L"Assets/Modelos/zombie/Zombie_gloss.png", 0, 0);
@@ -306,8 +310,11 @@ public:
 		TurnOnDepth();
 		terreno->Draw(camara->vista, camara->proyeccion);
 		
+		//Billboards
 		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-11, -78, 7, 5, uv1, uv2, uv3, uv4, frameBillboard);
+			-11, -78, 7, 5, uv1, uv2, uv3, uv4, frameBillboard,true);
+		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-33, -78, 7, 20, uv1, uv2, uv3, uv4, frameBillboard,false);
 
 		//Texto 
 		TurnOnAlphaBlending();
