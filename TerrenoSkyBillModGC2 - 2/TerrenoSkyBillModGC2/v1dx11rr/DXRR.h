@@ -87,6 +87,7 @@ public:
 
 	bool camType = true;
 	float rotCam;
+	float extra = 0.2f;
 	
     DXRR(HWND hWnd, int Ancho, int Alto)
 	{
@@ -312,8 +313,8 @@ public:
 		float clearColor[4] = { 0, 0, 0, 1.0f };
 		d3dContext->ClearRenderTargetView( backBufferTarget, clearColor );
 		d3dContext->ClearDepthStencilView( depthStencilView, D3D11_CLEAR_DEPTH, 1.0f, 0 );
-		camara->posCam.y = terreno->Superficie(camara->posCam.x, camara->posCam.z) + 5.5;
-		camara->posCam3P.y = terreno->Superficie(camara->posCam.x, camara->posCam.z) + 7;
+		camara->posCam.y = terreno->Superficie(camara->posCam.x, camara->posCam.z) + 4.5;
+		camara->posCam3P.y = terreno->Superficie(camara->posCam.x, camara->posCam.z) + 6;
 		camara->UpdateCam(vel, arriaba, izqder, camType);
 		skydome->Update(camara->vista, camara->proyeccion);
 
@@ -345,16 +346,16 @@ public:
 		segundos -= 0.005;
 		coche->setPosX(camara->hdveo.x);
 		coche->setPosZ(camara->hdveo.z);
-		coche->Draw(camara->vista, camara->proyeccion, terreno->Superficie(coche->getPosX(), coche->getPosZ()) + 2.9, camara->posCam, 1.0f, rotCam + XM_PI, 'Y', 1.5, camType, true);
-		zombi->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 0.7, camType, false);
-		casa->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 0.5, camType, false);
-		casa2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 90, 'Y', 0.5, camType, false);
-		casaPerro->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 3.0, camType, false);
-		sign->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.0, camType, false);
-		suministros->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 0.09, camType, false);
-		gasolinera->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 6, camType, false);
-		hangar->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 5, camType, false);
-		edificio->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 6, camType, false);
+		coche->Draw(camara->vista, camara->proyeccion, terreno->Superficie(coche->getPosX(), coche->getPosZ()), camara->posCam, 1.0f, rotCam + XM_PI, 'Y', 2.5 + extra, camType, true);
+		zombi->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 0.7 + extra, camType, false);
+		casa->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 0.5 + extra, camType, false);
+		casa2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 90, 'Y', 0.5 + extra, camType, false);
+		casaPerro->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 3.0 + extra, camType, false);
+		sign->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.0 + extra, camType, false);
+		suministros->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 0.09 + extra, camType, false);
+		gasolinera->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 6 + extra, camType, false);
+		hangar->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 5 + extra, camType, false);
+		edificio->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 6 + extra, camType, false);
 
 		swapChain->Present( 1, 0 );
 	}
