@@ -71,6 +71,7 @@ private:
 	
 	float posX;
 	float posZ;
+	float sphere[3];
 
 public:
 	ModeloRR(ID3D11Device* D3DDevice, ID3D11DeviceContext* D3DContext, char* ModelPath, WCHAR* colorTexturePath, WCHAR* specularTexturePath, float _posX, float _posZ)
@@ -91,6 +92,14 @@ public:
 		//libera recursos
 		
 		UnloadContent();
+	}
+
+	float* getSphere(float radio) {
+
+		sphere[0] = posX;
+		sphere[1] = posZ;
+		sphere[2] = radio;
+		return sphere;
 	}
 
 	float getPosX() {
@@ -138,7 +147,7 @@ public:
 	bool CargaParametros(char* ModelPath, WCHAR* diffuseTex, WCHAR* specularTex)
 	{
 		HRESULT d3dResult;
-		
+
 		ID3DBlob* vsBuffer = 0;
 
 		//cargamos el shaders de vertices que esta contenido en el Shader.fx, note
@@ -169,7 +178,7 @@ public:
 		D3D11_INPUT_ELEMENT_DESC solidColorLayout[] =
 		{
 			{ "POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 0, D3D11_INPUT_PER_VERTEX_DATA, 0 },
-			{ "TEXCOORD", 0, DXGI_FORMAT_R32G32_FLOAT, 0, D3D11_APPEND_ALIGNED_ELEMENT, D3D11_INPUT_PER_VERTEX_DATA, 0 },			
+			{ "TEXCOORD", 0, DXGI_FORMAT_R32G32_FLOAT, 0, D3D11_APPEND_ALIGNED_ELEMENT, D3D11_INPUT_PER_VERTEX_DATA, 0 },
 			{ "NORMAL", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, D3D11_APPEND_ALIGNED_ELEMENT, D3D11_INPUT_PER_VERTEX_DATA, 0},
 		};
 
@@ -225,18 +234,18 @@ public:
 			MessageBox(0, L"Error", L"Error al crear vertex buffer", MB_OK);
 			return false;
 		}
-	
-		
+
+
 		//crea los accesos de las texturas para los shaders 
 		d3dResult = D3DX11CreateShaderResourceViewFromFile(d3dDevice, diffuseTex, 0, 0, &colorMap, 0);
 		d3dResult = D3DX11CreateShaderResourceViewFromFile(d3dDevice, specularTex, 0, 0, &specMap, 0);
-		
+
 		if (FAILED(d3dResult))
 		{
 			return false;
 		}
 
-		
+
 
 		//aqui creamos el sampler
 		D3D11_SAMPLER_DESC colorMapDesc;
@@ -337,7 +346,7 @@ public:
 			cameraPosCB->Release();
 		if (specForceCB)
 			specForceCB->Release();
-		
+
 
 		colorMapSampler = 0;
 		colorMap = 0;
@@ -385,10 +394,29 @@ public:
 		d3dContext->VSSetShader(VertexShaderVS, 0, 0);
 		d3dContext->PSSetShader(solidColorPS, 0, 0);
 		//pasa lo sbuffers al shader
-		d3dContext->PSSetShaderResources(0, 1, &colorMap);	
+		d3dContext->PSSetShaderResources(0, 1, &colorMap);
 		d3dContext->PSSetShaderResources(1, 1, &specMap);
 
 		d3dContext->PSSetSamplers(0, 1, &colorMapSampler);
+
+		//mueve la camara
+		D3DXMATRIX rotationMat;
+		D3DXMatrixRotationYawPitchRoll(&rotationMat, 0.0f, 0.0f, 0.0f);
+		D3DXMATRIX translationMat;
+		D3DXMatrixTranslation(&translationMat, posX, ypos, posZ);
+		if (angle == 'X')
+			D3DXMatrixRotationX(&rotationMat, rot);
+		else if (angle == 'Y')
+			D3DXMatrixRotationY(&rotationMat, rot);
+		else if (angle == 'Z')
+			D3DXMatrixRotationZ(&rotationMat, rot);
+		viewMatrix *= rotationMat;
+
+		D3DXMATRIX scaleMat;
+		D3DXMatrixScaling(&scaleMat, scale, scale, scale);
+
+		D3DXMATRIX worldMat = rotationMat * scaleMat * translationMat;
+		D3DXMatrixTranspose(&worldMat, &worldMat);
 
 		//Separar el modelo de la camara (solo en 3ra persona)
 		D3DXMATRIX traslacionRotCam;
@@ -398,34 +426,6 @@ public:
 		else {
 			D3DXMatrixTranslation(&traslacionRotCam, 0.0, 0.0, 0.0);
 		}
-
-		//mueve la camara
-		D3DXMATRIX rotationMat;
-		D3DXMatrixRotationYawPitchRoll(&rotationMat, 0.0f, 0.0f, 0.0f);
-		if(angle == 'X')
-			D3DXMatrixRotationX(&rotationMat, rot);
-		else if (angle == 'Y')
-			D3DXMatrixRotationY(&rotationMat, rot);
-		else if (angle == 'Z')
-			D3DXMatrixRotationZ(&rotationMat, rot);
-		viewMatrix *= rotationMat;
-
-		D3DXMATRIX translationMat;
-		D3DXMatrixTranslation(&translationMat, posX, ypos, posZ);
-
-		D3DXMATRIX scaleMat;
-		D3DXMatrixScaling(&scaleMat, scale,scale*1.5,scale);
-
-		D3DXMATRIX worldMat = rotationMat * scaleMat * translationMat;
-
-		if (movCam) {
-			worldMat = scaleMat * traslacionRotCam * rotationMat * translationMat;
-		}
-		else {
-			worldMat = scaleMat * rotationMat * translationMat;
-		}
-
-		D3DXMatrixTranspose(&worldMat, &worldMat);
 		//actualiza los buffers del shader
 		d3dContext->UpdateSubresource(worldCB, 0, 0, &worldMat, 0, 0);
 		d3dContext->UpdateSubresource(viewCB, 0, 0, &vista, 0, 0);
@@ -439,7 +439,7 @@ public:
 		d3dContext->VSSetConstantBuffers(3, 1, &cameraPosCB);
 		d3dContext->VSSetConstantBuffers(4, 1, &specForceCB);
 		//cantidad de trabajos
-		
+
 		d3dContext->Draw(m_ObjParser.m_nVertexCount, 0);
 
 

@@ -45,6 +45,9 @@
     <ClInclude Include="Assets\Texto\Text.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="GUI.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Shader.fx">
@@ -75,6 +78,9 @@
       <Filter>Archivos de código fuente</Filter>
     </FxCompile>
     <FxCompile Include="Assets\Texto\Text.fx">
+      <Filter>Archivos de código fuente</Filter>
+    </FxCompile>
+    <FxCompile Include="GUI.fx">
       <Filter>Archivos de código fuente</Filter>
     </FxCompile>
   </ItemGroup>
