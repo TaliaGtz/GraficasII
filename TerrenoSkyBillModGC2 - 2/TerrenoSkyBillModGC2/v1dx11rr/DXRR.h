@@ -64,6 +64,7 @@ public:
 	ModeloRR* casa2;
 	ModeloRR* casaPerro;
 	ModeloRR* sign;
+	ModeloRR* suministros;
 	
 	float izqder;
 	float arriaba;
@@ -112,6 +113,7 @@ public:
 		casa2 = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Casa2/Construccion2.obj", L"Assets/Modelos/Casa2/DSC_5871_.jpg", L"Assets/Modelos/Casa2/DSC_5871_SPEC.png", 80, 0);
 		casaPerro = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/CasaPerro/CasaPerro.obj", L"Assets/Modelos/CasaPerro/doghouse0908_PBR_BaseColor.png", L"Assets/Modelos/CasaPerro/doghouse0908_PBR_AO.png", 120, 0);
 		sign = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Sign/Sign.obj", L"Assets/Modelos/Sign/sign_base_1.png", L"Assets/Modelos/Sign/sign_specular.png", 160, 0);
+		suministros = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Suministros/Suministros.obj", L"Assets/Modelos/Suministros/BaseColor.png", L"Assets/Modelos/Suministros/SumEspec.png", 200, 0);
 
 		//camType = true;	//Primera persona = true
 		
@@ -329,6 +331,7 @@ public:
 		casa2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.0, camType, false);
 		casaPerro->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 3.0, camType, false);
 		sign->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.0, camType, false);
+		suministros->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 0.05, camType, false);
 
 		swapChain->Present( 1, 0 );
 	}
