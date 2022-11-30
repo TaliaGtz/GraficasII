@@ -327,18 +327,105 @@ public:
 		terreno->Draw(camara->vista, camara->proyeccion);
 		
 		//Billboards
-		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-11, -77.9, 4, 3, uv1, uv2, uv3, uv4, frameBillboard,true);
-		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-33, -78, 0, 20, uv1, uv2, uv3, uv4, frameBillboard,false);
-		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-55, -100, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
 		Bote->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-11, -78, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-5, -85, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
+		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-5, -84.9, 4, 3, uv1, uv2, uv3, uv4, frameBillboard,true);
+		Bote->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			22, -66, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
+		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			22, -65.9, 4, 3, uv1, uv2, uv3, uv4, frameBillboard, true);
+		Bote->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-106, -63, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
+		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-106, -62.9, 4, 3, uv1, uv2, uv3, uv4, frameBillboard, true);
+		Bote->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-115, -49, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
+		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-115, -48.9, 4, 3, uv1, uv2, uv3, uv4, frameBillboard, true);
+		Bote->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			37, -62, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
+		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			37, -61.9, 4, 3, uv1, uv2, uv3, uv4, frameBillboard, true);
+		Bote->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			35, -153, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
+		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			35, -152.9, 4, 3, uv1, uv2, uv3, uv4, frameBillboard, true);
+		Bote->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			52, -167, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
+		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			52, -166.9, 4, 3, uv1, uv2, uv3, uv4, frameBillboard, true);
+		Bote->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-92, 36, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
+		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-92, 35.9, 4, 3, uv1, uv2, uv3, uv4, frameBillboard, true);
+		Bote->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			102, 140, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
+		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			102, 139.9, 4, 3, uv1, uv2, uv3, uv4, frameBillboard, true);
+		Bote->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			49, 63, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
+		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			49, 62.9, 4, 3, uv1, uv2, uv3, uv4, frameBillboard, true);
+
+		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-87, -48, 0, 20, uv1, uv2, uv3, uv4, frameBillboard,false);
+		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-36, -138, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
+		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			58, -135, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
+		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			110, -60, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
+		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			125, -31, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
+		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			5, 5, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
+		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-76, 26, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
+		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-78, 170, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
+		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-50, 186, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
+		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-60, 153, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
+		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			92, 161, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
+		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			26, 98, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
+		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-19, 109, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
+		
 		Lamp->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			23, -58, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-73, 39, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
+		Lamp->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-44, 155, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
+		Lamp->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			78, 103, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
+		Lamp->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			79, 5, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
+		Lamp->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			37, 15, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
+		Lamp->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			67, 142, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
+		Lamp->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-59, -31, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
+		Lamp->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			28, -127, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
+		Lamp->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			75, -146, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
+		Lamp->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			83, -58, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
+
 		Hidrante->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			10, -38, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			88, -12, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+		Hidrante->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-32, -115, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+		Hidrante->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-47, 18, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+		Hidrante->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			83, 138, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+		Hidrante->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-80, 52, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 
 		//Texto 
 		TurnOnAlphaBlending();
