@@ -445,6 +445,11 @@ public:
 		hangar->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', escala + extra, camType, false);
 		edificio->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', escala + extra, camType, false);
 
+		if (isPointInsideSphere(coche->getPos(), suministros->getSphere(3))) {
+			int colision = 1;
+			//Aqui colision y hago cosas jeje
+		}
+
 		swapChain->Present( 1, 0 );
 	}
 
