@@ -72,6 +72,7 @@ private:
 	float posX;
 	float posZ;
 	float sphere[3];
+	float pos[2];
 
 public:
 	ModeloRR(ID3D11Device* D3DDevice, ID3D11DeviceContext* D3DContext, char* ModelPath, WCHAR* colorTexturePath, WCHAR* specularTexturePath, float _posX, float _posZ)
@@ -100,6 +101,14 @@ public:
 		sphere[1] = posZ;
 		sphere[2] = radio;
 		return sphere;
+	}
+
+	float* getPos() {
+
+		pos[0] = this->posX;
+		pos[1] = this->posZ;
+		return pos;
+
 	}
 
 	float getPosX() {
