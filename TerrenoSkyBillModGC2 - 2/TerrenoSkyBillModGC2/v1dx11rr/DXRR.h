@@ -90,6 +90,7 @@ public:
 	float rotCam;
 	float escala = 10.0;
 	float extra = 0.2f;
+	float moveZ = 25;
 	
     DXRR(HWND hWnd, int Ancho, int Alto)
 	{
@@ -121,15 +122,15 @@ public:
 		//Models
 		model = new ModeloRR(d3dDevice, d3dContext, "Assets/Cofre/Cofre.obj", L"Assets/Cofre/Cofre-color.png", L"Assets/Cofre/Cofre-spec.png", 0, 0);
 		coche = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Truck/Truck2.obj", L"Assets/Modelos/Truck/Truck_diff.jpg", L"Assets/Modelos/Truck/Truck_spec.jpg", 0, 0);
-		zombi = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/zombie/Zombi.obj", L"Assets/Modelos/zombie/Zombie.png", L"Assets/Modelos/zombie/Zombie_gloss.png", 0, 0);
-		casa = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Casa/Construccion1.obj", L"Assets/Modelos/Casa/house_base.png", L"Assets/Modelos/Casa/house_base.png", 0, 0);
-		casa2 = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/EdificioRojo/EdificioRojo.obj", L"Assets/Modelos/EdificioRojo/EdRojo.jpg", L"Assets/Modelos/EdificioRojo/EdRojoSpec.png", 0, 0);
-		casaPerro = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/CasaPerro/CasaPerro.obj", L"Assets/Modelos/CasaPerro/doghouse0908_PBR_BaseColor.png", L"Assets/Modelos/CasaPerro/doghouse0908_PBR_AO.png", 0, 0);
-		sign = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Sign/Sign.obj", L"Assets/Modelos/Sign/sign_base_1.png", L"Assets/Modelos/Sign/sign_specular.png", 0, 0);
+		zombi = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/zombie/Zombi.obj", L"Assets/Modelos/zombie/Zombie.png", L"Assets/Modelos/zombie/Zombie_gloss.png", 0, moveZ);
+		casa = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Casa/Construccion1.obj", L"Assets/Modelos/Casa/house_base.png", L"Assets/Modelos/Casa/house_base.png", 0, moveZ);
+		casa2 = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/EdificioRojo/EdificioRojo.obj", L"Assets/Modelos/EdificioRojo/EdRojo.jpg", L"Assets/Modelos/EdificioRojo/EdRojoSpec.png", 0, moveZ);
+		casaPerro = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/CasaPerro/CasaPerro.obj", L"Assets/Modelos/CasaPerro/doghouse0908_PBR_BaseColor.png", L"Assets/Modelos/CasaPerro/doghouse0908_PBR_AO.png", 0, moveZ);
+		sign = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Sign/Sign.obj", L"Assets/Modelos/Sign/sign_base_1.png", L"Assets/Modelos/Sign/sign_specular.png", 0, moveZ);
 		suministros = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Suministros/Suministros.obj", L"Assets/Modelos/Suministros/BaseColor.png", L"Assets/Modelos/Suministros/SumEspec.png", 180, 0);
-		gasolinera = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Gasolinera/gasolinera.obj", L"Assets/Modelos/Gasolinera/gasolinera.jpeg", L"Assets/Modelos/Gasolinera/gasolineraSpec.jpg", 0, 0);
-		hangar = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Hangares/Hangares.obj", L"Assets/Modelos/Hangares/Hangar.png", L"Assets/Modelos/Hangares/HangarSpec.jpg", 0, 0);
-		edificio = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Edificio/Edificio.obj", L"Assets/Modelos/Edificio/Edificio.jpeg", L"Assets/Modelos/Edificio/EdificioSpec.jpg", 0, 0);
+		gasolinera = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Gasolinera/gasolinera.obj", L"Assets/Modelos/Gasolinera/gasolinera.jpeg", L"Assets/Modelos/Gasolinera/gasolineraSpec.jpg", 0, moveZ);
+		hangar = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Hangares/Hangares.obj", L"Assets/Modelos/Hangares/Hangar.png", L"Assets/Modelos/Hangares/HangarSpec.jpg", 0, moveZ);
+		edificio = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Edificio/Edificio.obj", L"Assets/Modelos/Edificio/Edificio.jpeg", L"Assets/Modelos/Edificio/EdificioSpec.jpg", 0, moveZ);
 
 		//camType = true;	//Primera persona = true
 		
@@ -330,401 +331,401 @@ public:
 		
 		//Billboards
 		Bote->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-5, -85, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-5, -85 + moveZ, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
 		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-5, -84.9, 4, 3, uv1, uv2, uv3, uv4, frameBillboard,true);
+			-5, -84.9 + moveZ, 4, 3, uv1, uv2, uv3, uv4, frameBillboard,true);
 		Bote->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			22, -66, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
+			22, -66 + moveZ, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
 		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			22, -65.9, 4, 3, uv1, uv2, uv3, uv4, frameBillboard, true);
+			22, -65.9 + moveZ, 4, 3, uv1, uv2, uv3, uv4, frameBillboard, true);
 		Bote->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-106, -63, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-106, -63 + moveZ, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
 		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-106, -62.9, 4, 3, uv1, uv2, uv3, uv4, frameBillboard, true);
+			-106, -62.9 + moveZ, 4, 3, uv1, uv2, uv3, uv4, frameBillboard, true);
 		Bote->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-115, -49, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-115, -49 + moveZ, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
 		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-115, -48.9, 4, 3, uv1, uv2, uv3, uv4, frameBillboard, true);
+			-115, -48.9 + moveZ, 4, 3, uv1, uv2, uv3, uv4, frameBillboard, true);
 		Bote->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			37, -62, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
+			37, -62 + moveZ, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
 		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			37, -61.9, 4, 3, uv1, uv2, uv3, uv4, frameBillboard, true);
+			37, -61.9 + moveZ, 4, 3, uv1, uv2, uv3, uv4, frameBillboard, true);
 		Bote->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			35, -153, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
+			35, -153 + moveZ, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
 		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			35, -152.9, 4, 3, uv1, uv2, uv3, uv4, frameBillboard, true);
+			35, -152.9 + moveZ, 4, 3, uv1, uv2, uv3, uv4, frameBillboard, true);
 		Bote->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			52, -167, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
+			52, -167 + moveZ, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
 		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			52, -166.9, 4, 3, uv1, uv2, uv3, uv4, frameBillboard, true);
+			52, -166.9 + moveZ, 4, 3, uv1, uv2, uv3, uv4, frameBillboard, true);
 		Bote->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-92, 36, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-92, 36 + moveZ, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
 		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-92, 35.9, 4, 3, uv1, uv2, uv3, uv4, frameBillboard, true);
+			-92, 35.9 + moveZ, 4, 3, uv1, uv2, uv3, uv4, frameBillboard, true);
 		Bote->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			102, 140, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
+			102, 140 + moveZ, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
 		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			102, 139.9, 4, 3, uv1, uv2, uv3, uv4, frameBillboard, true);
+			102, 139.9 + moveZ, 4, 3, uv1, uv2, uv3, uv4, frameBillboard, true);
 		Bote->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			49, 63, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
+			49, 63 + moveZ, 0, 3, uv1, uv2, uv3, uv4, frameBillboard, false);
 		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			49, 62.9, 4, 3, uv1, uv2, uv3, uv4, frameBillboard, true);
+			49, 62.9 + moveZ, 4, 3, uv1, uv2, uv3, uv4, frameBillboard, true);
 
 		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-87, -48, 0, 20, uv1, uv2, uv3, uv4, frameBillboard,false);
+			-87, -48 + moveZ, 0, 20, uv1, uv2, uv3, uv4, frameBillboard,false);
 		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-36, -138, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-36, -138 + moveZ, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
 		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			58, -135, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
+			58, -135 + moveZ, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
 		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			110, -60, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
+			110, -60 + moveZ, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
 		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			125, -31, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
+			125, -31 + moveZ, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
 		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			5, 5, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
+			5, 5 + moveZ, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
 		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-76, 26, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-76, 26 + moveZ, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
 		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-78, 170, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-78, 170 + moveZ, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
 		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-50, 186, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-50, 186 + moveZ, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
 		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-60, 153, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-60, 153 + moveZ, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
 		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			92, 161, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
+			92, 161 + moveZ, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
 		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			26, 98, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
+			26, 98 + moveZ, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
 		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-19, 109, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-19, 109 + moveZ, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
 		
 		Lamp->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-73, 39, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-73, 39 + moveZ, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
 		Lamp->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-44, 155, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-44, 155 + moveZ, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
 		Lamp->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			78, 103, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
+			78, 103 + moveZ, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
 		Lamp->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			79, 5, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
+			79, 5 + moveZ, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
 		Lamp->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			37, 15, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
+			37, 15 + moveZ, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
 		Lamp->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			67, 142, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
+			67, 142 + moveZ, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
 		Lamp->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-59, -31, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-59, -31 + moveZ, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
 		Lamp->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			28, -127, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
+			28, -127 + moveZ, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
 		Lamp->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			75, -146, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
+			75, -146 + moveZ, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
 		Lamp->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			83, -58, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
+			83, -58 + moveZ, 0, 10, uv1, uv2, uv3, uv4, frameBillboard, false);
 
 		Hidrante->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			88, -12, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			88, -12 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		Hidrante->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-32, -115, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-32, -115 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		Hidrante->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-47, 18, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-47, 18 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		Hidrante->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			83, 138, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			83, 138 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		Hidrante->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-80, 52, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-80, 52 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			23.536, 3.028, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			23.536, 3.028 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(18))) {	
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			37.594, 3.028, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			37.594, 3.028 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(18))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			50.999, 3.028, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			50.999, 3.028 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(18))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-11.955, 16.254, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-11.955, 16.254 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(18))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-29.513, -6.526, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-29.513, -6.526 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(18))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			12.436, -55.128, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			12.436, -55.128 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(18))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-9.195, -75.386, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-9.195, -75.386 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(18))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			33.136, -76.779, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			33.136, -76.779 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(18))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-29.513, -6.526, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-29.513, -6.526 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(18))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			15.128, -80.934, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			15.128, -80.934 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(11))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			30.222, -58.987, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			30.222, -58.987 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(11))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			61.905, -44.458, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			61.905, -44.458 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(14))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			104.62, -38.089, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			104.62, -38.089 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(14))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			104.62, -78.295, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			104.62, -78.295 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(14))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			104.62, -121.661, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			104.62, -121.661 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(14))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-51, 134, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-51, 134 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(14))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-58, 177, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-58, 177 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(14))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-17, 177, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-17, 177 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(14))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			24, 177, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			24, 177 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(14))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			69, 187, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			69, 187 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(14))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			69, 165, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			69, 165 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(14))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			113, -164, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			113, -164 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(14))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			92, -164, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			92, -164 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(14))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-1, -135, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-1, -135 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(34))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-74, -4, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-74, -4 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(34))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			26, 69, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			26, 69 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(29))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			8, 69, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			8, 69 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(29))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-8, 69, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-8, 69 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(29))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-93, -88, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-93, -88 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(29))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-86, -105, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-86, -105 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(29))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-77, -123, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-77, -123 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(29))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-101, 78, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-101, 78 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(32))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-125, 78, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-125, 78 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(32))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-125, 121, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-125, 121 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(32))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-101, 121, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-101, 121 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(32))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-125, 161, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-125, 161 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(32))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-101, 161, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-101, 161 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(32))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			109, 63, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			109, 63 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(32))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			133, 63, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			133, 63 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(32))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			133, 103, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			133, 103 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(32))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			133, 20, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			133, 20 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(32))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			109, 103, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			109, 103 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(32))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 			colisiones();
 		}
 		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			109, 20, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+			109, 20 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
 		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(32))) {
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
