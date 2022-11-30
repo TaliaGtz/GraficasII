@@ -78,4 +78,9 @@
       <Filter>Archivos de código fuente</Filter>
     </FxCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Música y sonido\Homicida-Paradójico.wav">
+      <Filter>Archivos de recursos</Filter>
+    </Media>
+  </ItemGroup>
 </Project>

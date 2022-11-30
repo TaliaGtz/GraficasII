@@ -116,7 +116,7 @@ public:
 		coche = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Truck/Truck2.obj", L"Assets/Modelos/Truck/Truck_diff.jpg", L"Assets/Modelos/Truck/Truck_spec.jpg", 0, 0);
 		zombi = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/zombie/Zombi.obj", L"Assets/Modelos/zombie/Zombie.png", L"Assets/Modelos/zombie/Zombie_gloss.png", 0, 0);
 		casa = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Casa/Construccion1.obj", L"Assets/Modelos/Casa/house_base.png", L"Assets/Modelos/Casa/house_base.png", 40, 0);
-		casa2 = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Casa2/Construccion2.obj", L"Assets/Modelos/Casa2/DSC_5871_.jpg", L"Assets/Modelos/Casa2/DSC_5871_SPEC.png", 80, 0);
+		casa2 = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Casa2/Construccion2.obj", L"Assets/Modelos/Casa2/DSC_5871_.jpg", L"Assets/Modelos/Casa2/DSC_5871_SPEC.png", 80, 20);
 		casaPerro = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/CasaPerro/CasaPerro.obj", L"Assets/Modelos/CasaPerro/doghouse0908_PBR_BaseColor.png", L"Assets/Modelos/CasaPerro/doghouse0908_PBR_AO.png", 120, 0);
 		sign = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Sign/Sign.obj", L"Assets/Modelos/Sign/sign_base_1.png", L"Assets/Modelos/Sign/sign_specular.png", 160, 0);
 		suministros = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Suministros/Suministros.obj", L"Assets/Modelos/Suministros/BaseColor.png", L"Assets/Modelos/Suministros/SumEspec.png", 180, 0);
@@ -339,8 +339,8 @@ public:
 		coche->setPosZ(camara->hdveo.z);
 		coche->Draw(camara->vista, camara->proyeccion, terreno->Superficie(coche->getPosX(), coche->getPosZ()) + 2.9, camara->posCam, 1.0f, rotCam + XM_PI, 'Y', 1.5, camType, true);
 		zombi->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 0.7, camType, false);
-		casa->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.0, camType, false);
-		casa2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.0, camType, false);
+		casa->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 0.5, camType, false);
+		casa2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 90, 'Y', 0.5, camType, false);
 		casaPerro->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 3.0, camType, false);
 		sign->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.0, camType, false);
 		suministros->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 0.09, camType, false);

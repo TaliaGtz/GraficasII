@@ -181,6 +181,9 @@
     <FxCompile Include="Billboard.hlsl" />
     <FxCompile Include="Modelo.fx" />
   </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Música y sonido\Homicida-Paradójico.wav" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
