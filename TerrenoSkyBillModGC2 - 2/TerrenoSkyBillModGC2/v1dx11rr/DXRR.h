@@ -49,7 +49,6 @@ public:
 	//Mis Billboards
 	BillboardRR *billboard;
 	BillboardRR* miArbol;
-	BillboardRR* Bote;
 
 	//Mi Camara
 	Camara *camara;
@@ -105,7 +104,6 @@ public:
 		//Billboards
 		billboard = new BillboardRR(L"Assets/Billboards/fuego-anim.png",L"Assets/Billboards/fuego-anim-normal.png", d3dDevice, d3dContext, 5);
 		miArbol = new BillboardRR(L"Assets/Billboards/arbolSeco.png", L"Assets/Billboards/arbolSecoNormal.png", d3dDevice, d3dContext, 10);
-		Bote = new BillboardRR(L"Assets/Billboards/Bote.png", L"Assets/Billboards/BoteNormal.png", d3dDevice, d3dContext, 0.5f);
 		//Models
 		model = new ModeloRR(d3dDevice, d3dContext, "Assets/Cofre/Cofre.obj", L"Assets/Cofre/Cofre-color.png", L"Assets/Cofre/Cofre-spec.png", 0, 0);
 		coche = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Truck/Truck2.obj", L"Assets/Modelos/Truck/Truck_diff.jpg", L"Assets/Modelos/Truck/Truck_spec.jpg", 0, 0);
@@ -314,11 +312,9 @@ public:
 		
 		//Billboards
 		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-11, -78, 0, 5, uv1, uv2, uv3, uv4, frameBillboard,true);
+			-11, -78, 7, 5, uv1, uv2, uv3, uv4, frameBillboard,true);
 		miArbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-33, -78, 0, 20, uv1, uv2, uv3, uv4, frameBillboard,false);
-		Bote->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-50, -50, 0, 20, uv1, uv2, uv3, uv4, frameBillboard, false);
+			-33, -78, 7, 20, uv1, uv2, uv3, uv4, frameBillboard,false);
 
 		//Texto 
 		TurnOnAlphaBlending();
