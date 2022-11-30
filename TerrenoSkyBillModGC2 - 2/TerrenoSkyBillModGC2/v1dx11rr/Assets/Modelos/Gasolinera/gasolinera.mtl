@@ -1,8 +1,76 @@
-newmtl Box077SG
+newmtl CasaPerro:DogHouseSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd doghouse0908_PBR_BaseColor.png
+Ni 1.00
+newmtl Construccion1:initialShadingGroup
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl Construccion2:Material__25
+illum 4
+Kd 0.59 0.59 0.59
+Ka 0.59 0.59 0.59
+Tf 1.00 1.00 1.00
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 10.00
+newmtl Construccion2:Material__29
+illum 4
+Kd 0.59 0.59 0.59
+Ka 0.59 0.59 0.59
+Tf 1.00 1.00 1.00
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 10.00
+newmtl Construccion2:house1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd DSC_5871_.jpg
+map_Ka DSC_5871_.jpg
+Ni 1.50
+Ks 0.82 0.82 0.82
+Ns 30.00
+newmtl Edificio:Box001SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.59 0.59 0.59
 Tf 1.00 1.00 1.00
+map_Kd Edificio.jpeg
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl Hangar:lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl Hangar:lambert3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl Suministros:lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+bump  -bm 1 ammobox_DefaultMaterial_Normal.png
+Ni 1.00
+newmtl gasolinera:Box077SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.59 0.59 0.59
+Tf 1.00 1.00 1.00
+map_Kd gasolinera.jpeg
 Ni 1.00
 Ks 0.00 0.00 0.00
 Ns 0.00
@@ -11,18 +79,4 @@ illum 4
 Kd 0.50 0.50 0.50
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
-Ni 1.00
-newmtl lambert2SG
-illum 4
-Kd 0.00 0.00 0.00
-Ka 0.00 0.00 0.00
-Tf 1.00 1.00 1.00
-map_Kd Hangar_BaseColor.png
-Ni 1.00
-newmtl lambert3SG
-illum 4
-Kd 0.00 0.00 0.00
-Ka 0.00 0.00 0.00
-Tf 1.00 1.00 1.00
-map_Kd hangar_Window_and_bits_BaseColor.png
 Ni 1.00

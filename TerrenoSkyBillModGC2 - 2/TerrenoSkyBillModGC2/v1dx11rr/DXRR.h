@@ -87,6 +87,7 @@ public:
 
 	bool camType = true;
 	float rotCam;
+	float escala = 10.0;
 	float extra = 0.2f;
 	
     DXRR(HWND hWnd, int Ancho, int Alto)
@@ -119,14 +120,14 @@ public:
 		model = new ModeloRR(d3dDevice, d3dContext, "Assets/Cofre/Cofre.obj", L"Assets/Cofre/Cofre-color.png", L"Assets/Cofre/Cofre-spec.png", 0, 0);
 		coche = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Truck/Truck2.obj", L"Assets/Modelos/Truck/Truck_diff.jpg", L"Assets/Modelos/Truck/Truck_spec.jpg", 0, 0);
 		zombi = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/zombie/Zombi.obj", L"Assets/Modelos/zombie/Zombie.png", L"Assets/Modelos/zombie/Zombie_gloss.png", 0, 0);
-		casa = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Casa/Construccion1.obj", L"Assets/Modelos/Casa/house_base.png", L"Assets/Modelos/Casa/house_base.png", 40, 0);
-		casa2 = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Casa2/Construccion2.obj", L"Assets/Modelos/Casa2/DSC_5871_.jpg", L"Assets/Modelos/Casa2/DSC_5871_SPEC.png", 80, 20);
-		casaPerro = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/CasaPerro/CasaPerro.obj", L"Assets/Modelos/CasaPerro/doghouse0908_PBR_BaseColor.png", L"Assets/Modelos/CasaPerro/doghouse0908_PBR_AO.png", 120, 0);
-		sign = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Sign/Sign.obj", L"Assets/Modelos/Sign/sign_base_1.png", L"Assets/Modelos/Sign/sign_specular.png", 160, 0);
+		casa = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Casa/Construccion1.obj", L"Assets/Modelos/Casa/house_base.png", L"Assets/Modelos/Casa/house_base.png", 0, 0);
+		casa2 = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/EdificioRojo/EdificioRojo.obj", L"Assets/Modelos/EdificioRojo/EdRojo.jpg", L"Assets/Modelos/EdificioRojo/EdRojoSpec.png", 0, 0);
+		casaPerro = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/CasaPerro/CasaPerro.obj", L"Assets/Modelos/CasaPerro/doghouse0908_PBR_BaseColor.png", L"Assets/Modelos/CasaPerro/doghouse0908_PBR_AO.png", 0, 0);
+		sign = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Sign/Sign.obj", L"Assets/Modelos/Sign/sign_base_1.png", L"Assets/Modelos/Sign/sign_specular.png", 0, 0);
 		suministros = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Suministros/Suministros.obj", L"Assets/Modelos/Suministros/BaseColor.png", L"Assets/Modelos/Suministros/SumEspec.png", 180, 0);
-		gasolinera = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Gasolinera/gasolinera.obj", L"Assets/Modelos/Gasolinera/gasolinera.jpeg", L"Assets/Modelos/Gasolinera/gasolineraSpec.jpg", -200, -80);
-		hangar = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Hangar/Hangar.obj", L"Assets/Modelos/Hangar/Hangar.png", L"Assets/Modelos/Hangar/HangarSpec.jpg", -150, 30);
-		edificio = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Edificio/Edificio.obj", L"Assets/Modelos/Edificio/Edificio.jpeg", L"Assets/Modelos/Edificio/EdificioSpec.jpg", 70, 100);
+		gasolinera = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Gasolinera/gasolinera.obj", L"Assets/Modelos/Gasolinera/gasolinera.jpeg", L"Assets/Modelos/Gasolinera/gasolineraSpec.jpg", 0, 0);
+		hangar = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Hangares/Hangares.obj", L"Assets/Modelos/Hangares/Hangar.png", L"Assets/Modelos/Hangares/HangarSpec.jpg", 0, 0);
+		edificio = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Edificio/Edificio.obj", L"Assets/Modelos/Edificio/Edificio.jpeg", L"Assets/Modelos/Edificio/EdificioSpec.jpg", 0, 0);
 
 		//camType = true;	//Primera persona = true
 		
@@ -348,14 +349,14 @@ public:
 		coche->setPosZ(camara->hdveo.z);
 		coche->Draw(camara->vista, camara->proyeccion, terreno->Superficie(coche->getPosX(), coche->getPosZ()), camara->posCam, 1.0f, rotCam + XM_PI, 'Y', 2.5 + extra, camType, true);
 		zombi->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 0.7 + extra, camType, false);
-		casa->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 0.5 + extra, camType, false);
-		casa2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 90, 'Y', 0.5 + extra, camType, false);
-		casaPerro->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 3.0 + extra, camType, false);
-		sign->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.0 + extra, camType, false);
+		casa->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', escala + extra, camType, false);
+		casa2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', escala + extra, camType, false);
+		casaPerro->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', escala + extra, camType, false);
+		sign->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', escala + extra, camType, false);
 		suministros->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 0.09 + extra, camType, false);
-		gasolinera->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 6 + extra, camType, false);
-		hangar->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 5 + extra, camType, false);
-		edificio->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 6 + extra, camType, false);
+		gasolinera->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', escala + extra, camType, false);
+		hangar->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', escala + extra, camType, false);
+		edificio->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', escala + extra, camType, false);
 
 		swapChain->Present( 1, 0 );
 	}
