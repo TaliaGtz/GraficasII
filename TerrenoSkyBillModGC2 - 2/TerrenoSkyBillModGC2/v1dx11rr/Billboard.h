@@ -45,6 +45,8 @@ public:
 
 	float posx, posz;
 	float escalx, escaly;
+	float sphere[3];
+	float pos[2];
 
 	UINT* indices;
 	VertexComponent* vertices;
@@ -74,6 +76,22 @@ public:
 		//libera recursos
 		delete vertcol;
 		UnloadContent();
+	}
+
+	float* getSphere(float radio) {
+
+		sphere[0] = posx;
+		sphere[1] = posz;
+		sphere[2] = radio;
+		return sphere;
+	}
+
+	float* getPos() {
+
+		pos[0] = this->posx;
+		pos[1] = this->posz;
+		return pos;
+
 	}
 
 	bool CompileD3DShader(WCHAR* filePath, char* entry, char* shaderModel, ID3DBlob** buffer)

@@ -418,14 +418,34 @@ public:
 
 		Hidrante->Draw(camara->vista, camara->proyeccion, camara->posCam,
 			88, -12, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+		if (isPointInsideSphere(coche->getPos(), Hidrante->getSphere(3))) {
+			int colision = 1;
+			//Aqui colision y hago cosas jeje
+		}
 		Hidrante->Draw(camara->vista, camara->proyeccion, camara->posCam,
 			-32, -115, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+		if (isPointInsideSphere(coche->getPos(), Hidrante->getSphere(3))) {
+			int colision = 1;
+			//Aqui colision y hago cosas jeje
+		}
 		Hidrante->Draw(camara->vista, camara->proyeccion, camara->posCam,
 			-47, 18, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+		if (isPointInsideSphere(coche->getPos(), Hidrante->getSphere(3))) {
+			int colision = 1;
+			//Aqui colision y hago cosas jeje
+		}
 		Hidrante->Draw(camara->vista, camara->proyeccion, camara->posCam,
 			83, 138, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+		if (isPointInsideSphere(coche->getPos(), Hidrante->getSphere(3))) {
+			int colision = 1;
+			//Aqui colision y hago cosas jeje
+		}
 		Hidrante->Draw(camara->vista, camara->proyeccion, camara->posCam,
 			-80, 52, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+		if (isPointInsideSphere(coche->getPos(), Hidrante->getSphere(3))) {
+			int colision = 1;
+			//Aqui colision y hago cosas jeje
+		}
 
 		//Texto 
 		TurnOnAlphaBlending();
@@ -449,6 +469,8 @@ public:
 			int colision = 1;
 			//Aqui colision y hago cosas jeje
 		}
+
+
 
 		swapChain->Present( 1, 0 );
 	}

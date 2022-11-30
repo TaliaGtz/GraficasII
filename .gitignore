@@ -359,3 +359,11 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+*.tlog
+TerrenoSkyBillModGC2 - 2/TerrenoSkyBillModGC2/v1dx11rr/x64/Debug/TerrenoSkyBill.tlog/TerrenoSkyBill.lastbuildstate
+TerrenoSkyBillModGC2 - 2/TerrenoSkyBillModGC2/v1dx11rr/x64/Debug/v1dx11rr.log
+*.idb
+*.pdb
+TerrenoSkyBillModGC2 - 2/TerrenoSkyBillModGC2/v1dx11rr/x64/Debug/XACT3Util.obj
+*.cso
+*.exe
