@@ -42,6 +42,8 @@ struct PS_Input
 	float3 normal : TEXCOORD1;
 	float3 campos : TEXCOORD2;
 	float specForce : TEXCOORD3;
+	
+	//Fog Factor
 };
 
 PS_Input VS_Main(VS_Input vertex)
