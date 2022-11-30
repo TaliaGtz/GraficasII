@@ -123,7 +123,7 @@ public:
 		Bote = new BillboardRR(L"Assets/Billboards/Bote.png", L"Assets/Billboards/BoteNormal.png", d3dDevice, d3dContext, 10);
 		Lamp = new BillboardRR(L"Assets/Billboards/lamp.png", L"Assets/Billboards/lampNormal.png", d3dDevice, d3dContext, 10);
 		Hidrante = new BillboardRR(L"Assets/Billboards/hydrant.png", L"Assets/Billboards/hydrantNormal.png", d3dDevice, d3dContext, 10);
-		ModelColisioner = new BillboardRR(L"Assets/Billboards/hydrant.png", L"Assets/Billboards/hydrantNormal.png", d3dDevice, d3dContext, 10);
+		ModelColisioner = new BillboardRR(L"Assets/Billboards/Collider.png", L"Assets/Billboards/Collider.png", d3dDevice, d3dContext, 10);
 		//Models
 		model = new ModeloRR(d3dDevice, d3dContext, "Assets/Cofre/Cofre.obj", L"Assets/Cofre/Cofre-color.png", L"Assets/Cofre/Cofre-spec.png", 0, 0);
 		coche = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Truck/Truck2.obj", L"Assets/Modelos/Truck/Truck_diff.jpg", L"Assets/Modelos/Truck/Truck_spec.jpg", 0, 0);
@@ -766,9 +766,29 @@ public:
 		suministros4->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camType, false);
 		suministros5->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camType, false);
 
-		if (isPointInsideSphere(coche->getPos(), suministros->getSphere(3))) {
+		if (isPointInsideSphere(coche->getPos(), suministros->getSphere(5))) {
 			int colision = 1;
-			//Aqui colision y hago cosas jeje
+			colisiones();
+		}
+		if (isPointInsideSphere(coche->getPos(), suministros1->getSphere(5))) {
+			int colision = 1;
+			colisiones();
+		}
+		if (isPointInsideSphere(coche->getPos(), suministros2->getSphere(5))) {
+			int colision = 1;
+			colisiones();
+		}
+		if (isPointInsideSphere(coche->getPos(), suministros3->getSphere(5))) {
+			int colision = 1;
+			colisiones();
+		}
+		if (isPointInsideSphere(coche->getPos(), suministros4->getSphere(5))) {
+			int colision = 1;
+			colisiones();
+		}
+		if (isPointInsideSphere(coche->getPos(), suministros5->getSphere(5))) {
+			int colision = 1;
+			colisiones();
 		}
 
 
