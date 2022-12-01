@@ -11,6 +11,7 @@
 #include "ModeloRR.h"
 #include "XACT3Util.h"
 #include <dinput.h>
+#include <conio.h>
 #include "GUI.h"
 #include "Text.h"
 #include "CuerpoAgua.h"
@@ -349,6 +350,8 @@ public:
 		bool collide = false;
 		if( d3dContext == 0 )
 			return;
+
+		while (ShowCursor(false) >= 0);
 
 		float clearColor[4] = { 0, 0, 0, 1.0f };
 		d3dContext->ClearRenderTargetView( backBufferTarget, clearColor );
