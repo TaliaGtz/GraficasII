@@ -370,6 +370,8 @@ public:
 		worldCB = 0;
 		cameraPosCB = 0;
 		specForceCB = 0;
+
+		return true;
 	}
 
 	void Update(float dt)
