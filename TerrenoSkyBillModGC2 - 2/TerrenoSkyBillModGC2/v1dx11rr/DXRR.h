@@ -354,7 +354,7 @@ public:
 		skydome->Update(camara->vista, camara->proyeccion);
 		static float onda = 0.0;
 		onda += 0.01;
-		agua->Draw(camara->vista, camara->proyeccion, camara->posCam, onda, light->GetDirection(), light->GetDiffuseColor(), 313.0f, -1.2f, 30.0f);
+		agua->Draw(camara->vista, camara->proyeccion, camara->posCam, onda, light->GetDirection(), light->GetDiffuseColor(), 318.0f, -1.2f, 40.0f);
 
 		float camPosXZ[2] = { camara->posCam.x, camara->posCam.z };
 
