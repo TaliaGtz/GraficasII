@@ -925,13 +925,22 @@ public:
 	
 		TurnOnAlphaBlending();
 		//GUI
+		if (segundos < 0) {
+			segundos = 0;
+		}
 
 		if (segundos <= 0 && intSuministrosObtenidos < 5) {
-			texto->DrawText(-0.90, 0.85, "Puntuacion final: " + puntosStr, 0.01);
+			stringstream puntaje;
+			puntaje << intPuntos;
+			string puntajeStr = puntaje.str();
+
+
+			texto->DrawText(-0.90, 0.85, "Puntuacion final: " + puntajeStr, 0.01);
 			gameover->Draw(0, 0);
 			texto->DrawText(0.15, -0.75, "Oh no!! No tendremos como atacar!!", 0.01);
 			texto->DrawText(0.15, -0.85, "A la proxima tal vez no lo logremos  ", 0.01);
 		}
+
 		if (intSuministrosObtenidos >= 5 && !BoolWin) {
 			BoolWin = true;
 		}
@@ -950,6 +959,7 @@ public:
 			}
 			texto->DrawText(-0.9, 0.75, "Tiempo: " + texto->Time(segundos), 0.01);
 			
+
 			stringstream suministrosObt;
 			suministrosObt << intSuministrosObtenidos;
 			string suministrosObtStr = suministrosObt.str();
