@@ -147,76 +147,79 @@ D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1
 D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\Text.h(323,1): warning C4305: 'argument': truncation from 'double' to 'FLOAT'
 D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\Text.h(343,1): warning C4305: 'initializing': truncation from 'double' to 'float'
 D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(164,1): warning C4305: 'argument': truncation from 'double' to 'float'
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(337,1): warning C4305: '+=': truncation from 'double' to 'float'
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(346,78): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(362,14): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(366,14): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(370,16): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(374,16): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(378,14): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(382,15): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(386,15): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(390,14): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(394,15): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(398,13): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(460,18): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(460,1): warning C4305: 'argument': truncation from 'double' to 'float'
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(466,18): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(466,1): warning C4305: 'argument': truncation from 'double' to 'float'
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(472,18): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(472,1): warning C4305: 'argument': truncation from 'double' to 'float'
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(478,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(478,1): warning C4305: 'argument': truncation from 'double' to 'float'
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(484,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(484,1): warning C4305: 'argument': truncation from 'double' to 'float'
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(490,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(490,1): warning C4305: 'argument': truncation from 'double' to 'float'
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(496,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(496,1): warning C4305: 'argument': truncation from 'double' to 'float'
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(502,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(502,1): warning C4305: 'argument': truncation from 'double' to 'float'
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(508,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(508,1): warning C4305: 'argument': truncation from 'double' to 'float'
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(514,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(514,1): warning C4305: 'argument': truncation from 'double' to 'float'
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(520,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(520,1): warning C4305: 'argument': truncation from 'double' to 'float'
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(526,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(526,1): warning C4305: 'argument': truncation from 'double' to 'float'
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(532,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(532,1): warning C4305: 'argument': truncation from 'double' to 'float'
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(538,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(538,1): warning C4305: 'argument': truncation from 'double' to 'float'
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(544,21): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(544,1): warning C4305: 'argument': truncation from 'double' to 'float'
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(725,155): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(728,115): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(780,1): warning C4305: '+=': truncation from 'double' to 'float'
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(788,1): warning C4305: '+=': truncation from 'double' to 'float'
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(796,1): warning C4305: '+=': truncation from 'double' to 'float'
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(803,1): warning C4305: '+=': truncation from 'double' to 'float'
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(811,1): warning C4305: '+=': truncation from 'double' to 'float'
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(824,1): warning C4305: 'argument': truncation from 'double' to 'float'
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(827,1): warning C4305: 'argument': truncation from 'double' to 'float'
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(831,55): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(831,1): warning C4305: 'argument': truncation from 'double' to 'float'
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(839,1): warning C4305: '-=': truncation from 'double' to 'float'
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(974,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(975,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(976,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(977,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(985,28): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(986,28): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(987,28): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(988,28): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(997,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(998,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(999,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(1000,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(1009,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(1010,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(1011,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(1012,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(166,1): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(339,1): warning C4305: '+=': truncation from 'double' to 'float'
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(348,78): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(364,14): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(368,14): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(372,16): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(376,16): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(380,14): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(384,15): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(388,15): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(392,14): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(396,15): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(400,13): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(462,18): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(462,1): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(468,18): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(468,1): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(474,18): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(474,1): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(480,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(480,1): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(486,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(486,1): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(492,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(492,1): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(498,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(498,1): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(504,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(504,1): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(510,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(510,1): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(516,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(516,1): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(522,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(522,1): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(528,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(528,1): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(534,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(534,1): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(540,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(540,1): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(546,21): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(546,1): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(819,155): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(822,115): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(874,1): warning C4305: '+=': truncation from 'double' to 'float'
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(882,1): warning C4305: '+=': truncation from 'double' to 'float'
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(890,1): warning C4305: '+=': truncation from 'double' to 'float'
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(897,1): warning C4305: '+=': truncation from 'double' to 'float'
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(905,1): warning C4305: '+=': truncation from 'double' to 'float'
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(918,1): warning C4305: '-=': truncation from 'double' to 'float'
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(919,1): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(922,1): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(926,55): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(926,1): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(939,1): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(940,1): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(1075,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(1076,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(1077,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(1078,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(1086,28): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(1087,28): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(1088,28): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(1089,28): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(1098,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(1099,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(1100,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(1101,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(1110,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(1111,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(1112,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\DXRR.h(1113,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\TerrenoSkyBill.cpp(147,15): warning C4244: 'return': conversion from 'WPARAM' to 'int', possible loss of data
 D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\TerrenoSkyBill.cpp(228,30): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 D:\Documentos\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\v1dx11rr\TerrenoSkyBill.cpp(232,70): warning C4244: '=': conversion from 'double' to 'float', possible loss of data

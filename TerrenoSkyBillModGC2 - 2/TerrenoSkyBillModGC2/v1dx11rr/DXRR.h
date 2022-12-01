@@ -82,6 +82,7 @@ public:
 	//Mi GUI
 	GUI* gameover;
 	GUI* win;
+	GUI* suministroGUI;
 
 	float izqder;
 	float arriaba;
@@ -160,6 +161,7 @@ public:
 		//GUI
 		gameover = new GUI(d3dDevice, d3dContext, 1, 1, L"Assets/UI/GameOverFin.png");
 		win = new GUI(d3dDevice, d3dContext, 1, 1, L"Assets/UI/Winner.png");
+		suministroGUI = new GUI(d3dDevice, d3dContext, 0.2, 0.2, L"Assets/UI/SuministrosGUI.png");
 		//Texto
 		texto = new Text(d3dDevice, d3dContext, 3.6, 1.2, L"Assets/Texto/font.jpg", XMFLOAT4(0.0f, 1.0f, 0.0f, 1.0f));
 
@@ -930,6 +932,12 @@ public:
 			BoolWin = true;
 		}
 		
+
+		stringstream suministrosObt;
+		suministrosObt << intSuministrosObtenidos;
+		string suministrosObtStr = suministrosObt.str();
+		suministroGUI->Draw(-0.9, -0.8);
+		texto->DrawText(-0.76, -0.8, ": " + suministrosObtStr, 0.01);
 	
 
 
