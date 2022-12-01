@@ -77,7 +77,6 @@ public:
 	ModeloRR* suministros2;
 	ModeloRR* suministros3;
 	ModeloRR* suministros4;
-	ModeloRR* suministros5;
 	
 
 	//Mi GUI
@@ -153,7 +152,6 @@ public:
 		suministros2 = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Suministros/Suministros.obj", L"Assets/Modelos/Suministros/BaseColor.png", L"Assets/Modelos/Suministros/SumEspec.png", 62, 32 + moveZ);
 		suministros3 = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Suministros/Suministros.obj", L"Assets/Modelos/Suministros/BaseColor.png", L"Assets/Modelos/Suministros/SumEspec.png", -53, 85 + moveZ);
 		suministros4 = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Suministros/Suministros.obj", L"Assets/Modelos/Suministros/BaseColor.png", L"Assets/Modelos/Suministros/SumEspec.png", 41, 121 + moveZ);
-		suministros5 = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Suministros/Suministros.obj", L"Assets/Modelos/Suministros/BaseColor.png", L"Assets/Modelos/Suministros/SumEspec.png", 2, 186 + moveZ);
 
 		//camType = true;	//Primera persona = true
 
@@ -767,13 +765,7 @@ public:
 		else {
 			suministros4->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camType, false);
 		}
-		// Suministro 5
-		if (ColisionesSuministros[5]) {
-			suministros5->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20)-50, camara->posCam, 10.0f, 0, 'A', 1, camType, false);
-		}
-		else {
-			suministros5->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camType, false);
-		}
+
 	
 		// Colisiones con los suministros
 		if ((isPointInsideSphere(coche->getPos(), suministros->getSphere(9))) && !ColisionesSuministros[0]) {
@@ -814,13 +806,6 @@ public:
 			ColisionesSuministros[4] = true;
 			segundos += 0.05;
 		}
-		if ((isPointInsideSphere(coche->getPos(), suministros5->getSphere(9))) && !ColisionesSuministros[5]) {
-			colisiones();
-			intPuntos = intPuntos + 1500;
-			intSuministrosObtenidos++;
-			ColisionesSuministros[5] = true;
-			segundos += 0.05;
-		}
 
 		//Puntos
 		stringstream puntos;
@@ -833,10 +818,10 @@ public:
 		texto->DrawText(-0.9, 0.9, "Puntuacion: " + puntosStr, 0.01);
 		texto->DrawText(-0.9, 0.8, "Tiempo: " + texto->Time(segundos), 0.01);
 
-		if (segundos <= 0 && intSuministrosObtenidos < 6) {
+		if (segundos <= 0 && intSuministrosObtenidos < 5) {
 			gameover->Draw(0, 0);
 		}
-		if (intSuministrosObtenidos >= 6) {
+		if (intSuministrosObtenidos >= 5) {
 			win->Draw(0, 0);
 		}
 		segundos -= 0.005;
