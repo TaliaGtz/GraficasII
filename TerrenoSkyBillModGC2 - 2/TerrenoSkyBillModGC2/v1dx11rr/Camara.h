@@ -24,6 +24,7 @@ public:
 	D3DXMATRIX rotacion;
 	float pos[2];
 	D3DXVECTOR3 pastPosCam;
+	D3DXVECTOR3 pastPosCam3P;
 
 	float* getPos() {
 		pos[0] = posCam.x;
@@ -66,6 +67,8 @@ public:
 	D3DXMATRIX UpdateCam(float vel, float arriaba, float izqder, bool camType)
 	{
 		pastPosCam = posCam;
+		pastPosCam3P = posCam3P;
+
 		D3DXMATRIX  vistaPrev = vista;
 		D3DXMatrixTranslation(&vista, 0, 0, 0);
 		D3DXVECTOR4 tempo;

@@ -973,6 +973,7 @@ public:
 
 	void colisiones() {
 		camara->posCam = camara->pastPosCam;
+		camara->posCam3P = camara->pastPosCam3P;
 	}
 
 };
