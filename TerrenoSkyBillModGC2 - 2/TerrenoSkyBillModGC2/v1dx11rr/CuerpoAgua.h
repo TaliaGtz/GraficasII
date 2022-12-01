@@ -88,7 +88,7 @@ public:
 		CargaParametros(L"Assets/Terreno/agua.jpg",
 			L"Assets/Terreno/aguaNormal.png",
 			L"Assets/Terreno/aguaNormal.png",
-			L"Assets/Terreno/Terreno3.png", 1000.0f); //Plano con lago
+			L"Assets/Terreno/midSpecMap.jpg", 100.0f); //Plano con lago
 	}
 
 	~Agua()
