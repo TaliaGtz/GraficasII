@@ -134,7 +134,7 @@ public:
 		arriaba = 0;
 		billCargaFuego();
 		segundos = 121;
-		intPuntos = 0;
+		intPuntos = 5000;
 		intSuministrosObtenidos = 0;
 		camara = new Camara(D3DXVECTOR3(0,120,70), D3DXVECTOR3(0,40,0), D3DXVECTOR3(0,10,0), Ancho, Alto);
 		terreno = new TerrenoRR(1500, 1500, d3dDevice, d3dContext);
@@ -880,7 +880,7 @@ public:
 		// Colisiones con los suministros
 		if ((isPointInsideSphere(coche->getPos(), suministros->getSphere(12))) && !ColisionesSuministros[0]) {
 			colisiones();
-			intPuntos= intPuntos + 1500;	
+			intPuntos= intPuntos + 500;	
 			intSuministrosObtenidos++;
 			ColisionesSuministros[0] = true;
 			segundos += 0.05;
@@ -888,7 +888,7 @@ public:
 		
 		if ((isPointInsideSphere(coche->getPos(), suministros1->getSphere(12))) && !ColisionesSuministros[1]) {
 			colisiones();
-			intPuntos = intPuntos + 1500;
+			intPuntos = intPuntos + 500;
 			intSuministrosObtenidos++;
 			ColisionesSuministros[1] = true;
 			segundos += 0.05;
@@ -896,14 +896,14 @@ public:
 	
 		if ((isPointInsideSphere(coche->getPos(), suministros2->getSphere(12))) && !ColisionesSuministros[2]) {
 			colisiones();
-			intPuntos = intPuntos + 1500;
+			intPuntos = intPuntos + 500;
 			intSuministrosObtenidos++;
 			ColisionesSuministros[2] = true;
 			segundos += 0.05;
 		}
 		if ((isPointInsideSphere(coche->getPos(), suministros3->getSphere(12))) && !ColisionesSuministros[3]) {
 			colisiones();
-			intPuntos = intPuntos + 1500;
+			intPuntos = intPuntos + 500;
 			intSuministrosObtenidos++;
 			ColisionesSuministros[3] = true;
 			segundos += 0.05;
@@ -911,7 +911,7 @@ public:
 		if ((isPointInsideSphere(coche->getPos(), suministros4->getSphere(12))) && !ColisionesSuministros[4]) {
 			
 			colisiones();
-			intPuntos = intPuntos + 1500;
+			intPuntos = intPuntos + 500;
 			intSuministrosObtenidos++;
 			ColisionesSuministros[4] = true;
 			segundos += 0.05;
@@ -928,14 +928,13 @@ public:
 		if (segundos < 0) {
 			segundos = 0;
 		}
+		if (intPuntos < 1) {
+			intPuntos = 1;
+		}
 
 		if (segundos <= 0 && intSuministrosObtenidos < 5) {
-			stringstream puntaje;
-			puntaje << intPuntos;
-			string puntajeStr = puntaje.str();
 
-
-			texto->DrawText(-0.90, 0.85, "Puntuacion final: " + puntajeStr, 0.01);
+			texto->DrawText(-0.90, 0.85, "Puntuacion final: " + puntosStr, 0.01);
 			gameover->Draw(0, 0);
 			texto->DrawText(0.15, -0.75, "Oh no!! No tendremos como atacar!!", 0.01);
 			texto->DrawText(0.15, -0.85, "A la proxima tal vez no lo logremos  ", 0.01);
@@ -947,7 +946,7 @@ public:
 
 		if (BoolNext) {
 			if (!BoolWin) {
-				intPuntos++;
+				intPuntos--;
 				segundos -= 0.02;
 				texto->DrawText(-0.90, 0.85, "Puntuacion: " + puntosStr, 0.01);
 				texto->DrawText(0.3, -0.85, "Mision: Conseguir suministros", 0.01);
