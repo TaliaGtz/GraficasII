@@ -159,8 +159,8 @@ public:
 
 
 		//GUI
-		gameover = new GUI(d3dDevice, d3dContext, 1, 1, L"Assets/UI/gameover.png");
-		win = new GUI(d3dDevice, d3dContext, 1, 1, L"Assets/UI/levelCleared.png");
+		gameover = new GUI(d3dDevice, d3dContext, 1, 1, L"Assets/UI/GameOverFin.png");
+		win = new GUI(d3dDevice, d3dContext, 1, 1, L"Assets/UI/Winner.png");
 		//Texto
 		texto = new Text(d3dDevice, d3dContext, 3.6, 1.2, L"Assets/Texto/font.jpg", XMFLOAT4(0.0f, 1.0f, 0.0f, 1.0f));
 
