@@ -716,6 +716,98 @@ public:
 		}
 
 
+		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			389, 20 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(89))) {
+			colisiones();
+			intPuntos = intPuntos - 1;
+		}
+		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			364, 174 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(89))) {
+			colisiones();
+			intPuntos = intPuntos - 1;
+		}
+		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			277, 311 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(89))) {
+			colisiones();
+			intPuntos = intPuntos - 1;
+		}
+		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			133, 383 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(89))) {
+			colisiones();
+			intPuntos = intPuntos - 1;
+		}
+		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-32, 383 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(89))) {
+			colisiones();
+			intPuntos = intPuntos - 1;
+		}
+		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-198, 360 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(89))) {
+			colisiones();
+			intPuntos = intPuntos - 1;
+		}
+		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-323, 255 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(89))) {
+			colisiones();
+			intPuntos = intPuntos - 1;
+		}
+		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-358, 96 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(89))) {
+			colisiones();
+			intPuntos = intPuntos - 1;
+		}
+		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-364, 62 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(89))) {
+			colisiones();
+			intPuntos = intPuntos - 1;
+		}
+		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-341, -235 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(89))) {
+			colisiones();
+			intPuntos = intPuntos - 1;
+		}
+		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-201, 325 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(89))) {
+			colisiones();
+			intPuntos = intPuntos - 1;
+		}
+		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-38, -353 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(89))) {
+			colisiones();
+			intPuntos = intPuntos - 1;
+		}
+		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			127, -340 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(89))) {
+			colisiones();
+			intPuntos = intPuntos - 1;
+		}
+		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			277, -277 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(89))) {
+			colisiones();
+			intPuntos = intPuntos - 1;
+		}
+		ModelColisioner->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			362, -141 + moveZ, 0, 2, uv1, uv2, uv3, uv4, frameBillboard, false);
+		if (isPointInsideSphere(coche->getPos(), ModelColisioner->getSphere(89))) {
+			colisiones();
+			intPuntos = intPuntos - 1;
+		}
+
+
 		//Texto 
 	
 
