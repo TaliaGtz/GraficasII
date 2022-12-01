@@ -15,6 +15,7 @@
 #include "Text.h"
 #include "CuerpoAgua.h"
 #include "Light.h"
+#include "Suministros.h"
 
 class DXRR{	
 
@@ -76,11 +77,11 @@ public:
 	ModeloRR* gasolinera;
 	ModeloRR* hangar;
 	ModeloRR* edificio;
-	ModeloRR* suministros;
-	ModeloRR* suministros1;
-	ModeloRR* suministros2;
-	ModeloRR* suministros3;
-	ModeloRR* suministros4;
+	Suministros* suministros;
+	Suministros* suministros1;
+	Suministros* suministros2;
+	Suministros* suministros3;
+	Suministros* suministros4;
 	
 
 	//Mi GUI
@@ -154,11 +155,11 @@ public:
 		gasolinera = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Gasolinera/gasolinera.obj", L"Assets/Modelos/Gasolinera/gasolinera.jpeg", L"Assets/Modelos/Gasolinera/gasolineraSpec.jpg", 0, moveZ);
 		hangar = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Hangares/Hangares.obj", L"Assets/Modelos/Hangares/Hangar.png", L"Assets/Modelos/Hangares/HangarSpec.jpg", 0, moveZ);
 		edificio = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Edificio/Edificio.obj", L"Assets/Modelos/Edificio/Edificio.jpeg", L"Assets/Modelos/Edificio/EdificioSpec.jpg", 0, moveZ);
-		suministros = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Suministros/Suministros.obj", L"Assets/Modelos/Suministros/BaseColor.png", L"Assets/Modelos/Suministros/SumEspec.png", 45, -126 + moveZ);
-		suministros1 = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Suministros/Suministros.obj", L"Assets/Modelos/Suministros/BaseColor.png", L"Assets/Modelos/Suministros/SumEspec.png", -51, -69 + moveZ);
-		suministros2 = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Suministros/Suministros.obj", L"Assets/Modelos/Suministros/BaseColor.png", L"Assets/Modelos/Suministros/SumEspec.png", 62, 32 + moveZ);
-		suministros3 = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Suministros/Suministros.obj", L"Assets/Modelos/Suministros/BaseColor.png", L"Assets/Modelos/Suministros/SumEspec.png", -53, 85 + moveZ);
-		suministros4 = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Suministros/Suministros.obj", L"Assets/Modelos/Suministros/BaseColor.png", L"Assets/Modelos/Suministros/SumEspec.png", 41, 121 + moveZ);
+		suministros = new Suministros(d3dDevice, d3dContext, "Assets/Modelos/Suministros/Suministros.obj", L"Assets/Modelos/Suministros/BaseColor.png", L"Assets/Modelos/Suministros/SumEspec.png", 45, -126 + moveZ);
+		suministros1 = new Suministros(d3dDevice, d3dContext, "Assets/Modelos/Suministros/Suministros.obj", L"Assets/Modelos/Suministros/BaseColor.png", L"Assets/Modelos/Suministros/SumEspec.png", -51, -69 + moveZ);
+		suministros2 = new Suministros(d3dDevice, d3dContext, "Assets/Modelos/Suministros/Suministros.obj", L"Assets/Modelos/Suministros/BaseColor.png", L"Assets/Modelos/Suministros/SumEspec.png", 62, 32 + moveZ);
+		suministros3 = new Suministros(d3dDevice, d3dContext, "Assets/Modelos/Suministros/Suministros.obj", L"Assets/Modelos/Suministros/BaseColor.png", L"Assets/Modelos/Suministros/SumEspec.png", -53, 85 + moveZ);
+		suministros4 = new Suministros(d3dDevice, d3dContext, "Assets/Modelos/Suministros/Suministros.obj", L"Assets/Modelos/Suministros/BaseColor.png", L"Assets/Modelos/Suministros/SumEspec.png", 41, 121 + moveZ);
 
 		//GUI
 		gameover = new GUI(d3dDevice, d3dContext, 1, 1, L"Assets/UI/GameOverFin.png");

@@ -1,5 +1,5 @@
-#ifndef _modelo
-#define _modelo
+#ifndef _suministros
+#define _suministros
 
 //#define _XM_NO_INTRINSICS_
 
@@ -13,16 +13,15 @@
 #include <iostream>
 #include "loadModel.h"
 
-
 using namespace std;
 
-class ModeloRR {
+class Suministros {
 private:
 	struct VertexComponent
 	{
 		D3DXVECTOR3 pos;
-		D3DXVECTOR2 UV;		
-		D3DXVECTOR3 normal;		
+		D3DXVECTOR2 UV;
+		D3DXVECTOR3 normal;
 	};
 
 	struct VertexCollide
@@ -69,18 +68,18 @@ private:
 	ID3D11DeviceContext* d3dContext;
 
 	CObjParser m_ObjParser;
-	
+
 	float posX;
 	float posZ;
 	float sphere[3];
 	float pos[2];
 
 public:
-	ModeloRR(ID3D11Device* D3DDevice, ID3D11DeviceContext* D3DContext, char* ModelPath, WCHAR* colorTexturePath, WCHAR* specularTexturePath, float _posX, float _posZ)
+	Suministros(ID3D11Device* D3DDevice, ID3D11DeviceContext* D3DContext, char* ModelPath, WCHAR* colorTexturePath, WCHAR* specularTexturePath, float _posX, float _posZ)
 	{
 		//copiamos el device y el device context a la clase terreno
 		d3dContext = D3DContext;
-		d3dDevice = D3DDevice;	
+		d3dDevice = D3DDevice;
 
 		posX = _posX;
 		posZ = _posZ;
@@ -89,10 +88,10 @@ public:
 		CargaParametros(ModelPath, colorTexturePath, specularTexturePath);//L"Assets/Tent-Tower/tent_diffuse.jpg"
 	}
 
-	~ModeloRR()
+	~Suministros()
 	{
 		//libera recursos
-		
+
 		UnloadContent();
 	}
 
@@ -115,7 +114,7 @@ public:
 	float getPosX() {
 		return this->posX;
 	}
-	
+
 	float getPosZ() {
 		return this->posZ;
 	}
@@ -163,7 +162,7 @@ public:
 		//cargamos el shaders de vertices que esta contenido en el Shader.fx, note
 		//que VS_Main es el nombre del vertex shader en el shader, vsBuffer contendra
 		//al puntero del mismo
-		bool compileResult = CompileD3DShader(L"Modelo.fx", "VS_Main", "vs_4_0", &vsBuffer);
+		bool compileResult = CompileD3DShader(L"Suministro.fx", "VS_Main", "vs_4_0", &vsBuffer);
 		//en caso de no poder cargarse ahi muere la cosa
 		if (compileResult == false)
 		{
@@ -207,7 +206,7 @@ public:
 		ID3DBlob* psBuffer = 0;
 		// de los vertices pasamos al pixel shader, note que el nombre del shader es el mismo
 		//ahora buscamos al pixel shader llamado PS_Main
-		compileResult = CompileD3DShader(L"Modelo.fx", "PS_Main", "ps_4_0", &psBuffer);
+		compileResult = CompileD3DShader(L"Suministro.fx", "PS_Main", "ps_4_0", &psBuffer);
 
 		if (compileResult == false)
 		{
@@ -407,7 +406,7 @@ public:
 		d3dContext->PSSetShader(solidColorPS, 0, 0);
 		//pasa lo sbuffers al shader
 		d3dContext->PSSetShaderResources(0, 1, &colorMap);
-		d3dContext->PSSetShaderResources(1, 1, &specMap);
+		//d3dContext->PSSetShaderResources(1, 1, &specMap);
 
 		d3dContext->PSSetSamplers(0, 1, &colorMapSampler);
 
@@ -449,7 +448,7 @@ public:
 		d3dContext->VSSetConstantBuffers(1, 1, &viewCB);
 		d3dContext->VSSetConstantBuffers(2, 1, &projCB);
 		d3dContext->VSSetConstantBuffers(3, 1, &cameraPosCB);
-		d3dContext->VSSetConstantBuffers(4, 1, &specForceCB);
+		//d3dContext->VSSetConstantBuffers(4, 1, &specForceCB);
 		//cantidad de trabajos
 
 		d3dContext->Draw(m_ObjParser.m_nVertexCount, 0);
@@ -458,3 +457,4 @@ public:
 	}
 };
 #endif
+
