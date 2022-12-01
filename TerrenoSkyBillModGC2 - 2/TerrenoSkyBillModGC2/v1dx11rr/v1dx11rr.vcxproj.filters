@@ -48,6 +48,12 @@
     <ClInclude Include="GUI.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="CuerpoAgua.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Light.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Shader.fx">
@@ -69,6 +75,9 @@
     <ClCompile Include="XACT3Util.cpp">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
+    <ClCompile Include="Light.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="Billboard.hlsl">
@@ -81,6 +90,9 @@
       <Filter>Archivos de código fuente</Filter>
     </FxCompile>
     <FxCompile Include="GUI.fx">
+      <Filter>Archivos de código fuente</Filter>
+    </FxCompile>
+    <FxCompile Include="CuerpoAgua.fx">
       <Filter>Archivos de código fuente</Filter>
     </FxCompile>
   </ItemGroup>

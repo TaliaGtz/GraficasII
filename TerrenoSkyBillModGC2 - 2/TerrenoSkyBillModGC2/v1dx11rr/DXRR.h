@@ -13,6 +13,8 @@
 #include <dinput.h>
 #include "GUI.h"
 #include "Text.h"
+#include "CuerpoAgua.h"
+#include "Light.h"
 
 class DXRR{	
 
@@ -43,6 +45,7 @@ public:
 
 	//Mi terreno
 	TerrenoRR *terreno;
+	Agua* agua;
 
 	//Mi Skydome
 	SkyDome *skydome;
@@ -57,6 +60,7 @@ public:
 
 	//Mi Camara
 	Camara *camara;
+	Light* light = 0;
 
 	//Mi Texto
 	Text* texto;
@@ -130,6 +134,7 @@ public:
 		intSuministrosObtenidos = 0;
 		camara = new Camara(D3DXVECTOR3(0,120,70), D3DXVECTOR3(0,40,0), D3DXVECTOR3(0,10,0), Ancho, Alto);
 		terreno = new TerrenoRR(1500, 1500, d3dDevice, d3dContext);
+		agua = new Agua(100, 100, d3dDevice, d3dContext);
 		skydome = new SkyDome(32, 32, 100.0f, &d3dDevice, &d3dContext, L"Assets/Skydome/skydome.jpg");
 		//Billboards
 		billboard = new BillboardRR(L"Assets/Billboards/fuego-anim.png",L"Assets/Billboards/fuego-anim-normal.png", d3dDevice, d3dContext, 5);
@@ -349,6 +354,9 @@ public:
 		camara->posCam3P.y = terreno->Superficie(camara->posCam.x, camara->posCam.z) + 6;
 		camara->UpdateCam(vel, arriaba, izqder, camType);
 		skydome->Update(camara->vista, camara->proyeccion);
+		static float onda = 0.0;
+		onda += 0.01;
+		agua->Draw(camara->vista, camara->proyeccion, camara->posCam, onda, light->GetDirection(), light->GetDiffuseColor(), 150.0f, -9.0f, 150.1f);
 
 		float camPosXZ[2] = { camara->posCam.x, camara->posCam.z };
 

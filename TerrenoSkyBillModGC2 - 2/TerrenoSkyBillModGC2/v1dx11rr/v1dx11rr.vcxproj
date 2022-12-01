@@ -152,6 +152,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Light.cpp" />
     <ClCompile Include="loadModel.cpp" />
     <ClCompile Include="TerrenoSkyBill.cpp" />
     <ClCompile Include="XACT3Util.cpp" />
@@ -160,9 +161,11 @@
     <ClInclude Include="Assets\Texto\Text.h" />
     <ClInclude Include="Billboard.h" />
     <ClInclude Include="Camara.h" />
+    <ClInclude Include="CuerpoAgua.h" />
     <ClInclude Include="DXRR.h" />
     <ClInclude Include="GamePadRR.h" />
     <ClInclude Include="GUI.h" />
+    <ClInclude Include="Light.h" />
     <ClInclude Include="loadModel.h" />
     <ClInclude Include="ModeloRR.h" />
     <ClInclude Include="SkyDome.h" />
@@ -180,6 +183,10 @@
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
     </FxCompile>
     <FxCompile Include="Billboard.hlsl" />
+    <FxCompile Include="CuerpoAgua.fx">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Effect</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+    </FxCompile>
     <FxCompile Include="GUI.fx">
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Effect</ShaderType>
