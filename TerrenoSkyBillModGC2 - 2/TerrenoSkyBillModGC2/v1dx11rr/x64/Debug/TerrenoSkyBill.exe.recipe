@@ -2,24 +2,24 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\Documents\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\x64\Debug\TerrenoSkyBill.exe</FullPath>
+      <FullPath>C:\Users\gjsg2\Documents\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\x64\Debug\TerrenoSkyBill.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles>
     <ContentFile>
-      <FullPath>D:\Documents\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\x64\Debug\Text.cso</FullPath>
+      <FullPath>C:\Users\gjsg2\Documents\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\x64\Debug\Text.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>D:\Documents\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\x64\Debug\Billboard.cso</FullPath>
+      <FullPath>C:\Users\gjsg2\Documents\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\x64\Debug\Billboard.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>D:\Documents\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\x64\Debug\CuerpoAgua.cso</FullPath>
+      <FullPath>C:\Users\gjsg2\Documents\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\x64\Debug\CuerpoAgua.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>D:\Documents\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\x64\Debug\GUI.cso</FullPath>
+      <FullPath>C:\Users\gjsg2\Documents\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\x64\Debug\GUI.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>D:\Documents\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\x64\Debug\Modelo.cso</FullPath>
+      <FullPath>C:\Users\gjsg2\Documents\GitHub\GraficasII\TerrenoSkyBillModGC2 - 2\TerrenoSkyBillModGC2\x64\Debug\Modelo.cso</FullPath>
     </ContentFile>
   </ContentFiles>
   <SatelliteDlls />

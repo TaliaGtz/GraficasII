@@ -169,6 +169,7 @@
     <ClInclude Include="loadModel.h" />
     <ClInclude Include="ModeloRR.h" />
     <ClInclude Include="SkyDome.h" />
+    <ClInclude Include="Suministros.h" />
     <ClInclude Include="TerrenoRR.h" />
     <ClInclude Include="XACT3Util.h" />
   </ItemGroup>
@@ -192,6 +193,7 @@
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Effect</ShaderType>
     </FxCompile>
     <FxCompile Include="Modelo.fx" />
+    <FxCompile Include="Suministro.fx" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Assets\Música y sonido\Homicida-Paradójico.wav" />
