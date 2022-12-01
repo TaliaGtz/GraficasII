@@ -87,7 +87,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
     //AdjustWindowRect(&wr, WS_OVERLAPPEDWINDOW, FALSE);
     hWnd = CreateWindowEx(WS_EX_APPWINDOW,
                           L"DXRR_E1",
-                          L"PLANTILLA PROYECTO",
+                          L"ZOMBIES",
                           WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_POPUP,
         posX,
         posY,
@@ -195,6 +195,11 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
                 else {
                     dxrr->camType = false;	    //Tercera persona = false
                 }
+            }
+
+            if (keyboardData[DIK_N] & 0x80) {
+                dxrr->BoolNext = true;	    
+
             }
 
             if (keyboardData[DIK_B] & 0x80) {

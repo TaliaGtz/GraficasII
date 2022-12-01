@@ -88,6 +88,8 @@ public:
 	GUI* gameover;
 	GUI* win;
 	GUI* suministroGUI;
+	GUI* BordeIni;
+	GUI* Borde;
 
 	float izqder;
 	float arriaba;
@@ -106,6 +108,7 @@ public:
 
 	bool camType = true;
 	bool BoolWin = false;
+	bool BoolNext = false;
 	float rotCam;
 	float escala = 10.0;
 	float extra = 0.2f;
@@ -162,9 +165,11 @@ public:
 		suministros4 = new Suministros(d3dDevice, d3dContext, "Assets/Modelos/Suministros/Suministros.obj", L"Assets/Modelos/Suministros/BaseColor.png", L"Assets/Modelos/Suministros/SumEspec.png", 41, 121 + moveZ);
 
 		//GUI
-		gameover = new GUI(d3dDevice, d3dContext, 1, 1, L"Assets/UI/GameOverFin.png");
-		win = new GUI(d3dDevice, d3dContext, 1, 1, L"Assets/UI/Winner.png");
+		gameover = new GUI(d3dDevice, d3dContext, 1, 2, L"Assets/UI/GameOverFin.png");
+		win = new GUI(d3dDevice, d3dContext, 1, 2, L"Assets/UI/Winner.png");
 		suministroGUI = new GUI(d3dDevice, d3dContext, 0.2, 0.2, L"Assets/UI/SuministrosGUI.png");
+		BordeIni = new GUI(d3dDevice, d3dContext, 2, 2, L"Assets/UI/BordeIni.png");
+		Borde = new GUI(d3dDevice, d3dContext, 2, 2, L"Assets/UI/Pantalla.png");
 		//Texto
 		texto = new Text(d3dDevice, d3dContext, 3.6, 1.2, L"Assets/Texto/font.jpg", XMFLOAT4(0.0f, 1.0f, 0.0f, 1.0f));
 
@@ -920,33 +925,43 @@ public:
 	
 		TurnOnAlphaBlending();
 		//GUI
-		if (!BoolWin) {
-			intPuntos++;
-			segundos -= 0.005;
-			texto->DrawText(-0.9, 0.9, "Puntuacion: " + puntosStr, 0.01);
-		}
-		else {
-			texto->DrawText(-0.9, 0.9, "Puntuacion final: " + puntosStr, 0.01);
-			win->Draw(0, 0);
-		}
-	
-		texto->DrawText(-0.9, 0.8, "Tiempo: " + texto->Time(segundos), 0.01);
 
 		if (segundos <= 0 && intSuministrosObtenidos < 5) {
+			texto->DrawText(-0.90, 0.85, "Puntuacion final: " + puntosStr, 0.01);
 			gameover->Draw(0, 0);
+			texto->DrawText(0.15, -0.75, "Oh no!! No tendremos como atacar!!", 0.01);
+			texto->DrawText(0.15, -0.85, "A la proxima tal vez no lo logremos  ", 0.01);
 		}
 		if (intSuministrosObtenidos >= 5 && !BoolWin) {
 			BoolWin = true;
 		}
-		
 
-		stringstream suministrosObt;
-		suministrosObt << intSuministrosObtenidos;
-		string suministrosObtStr = suministrosObt.str();
-		suministroGUI->Draw(-0.9, -0.8);
-		texto->DrawText(-0.76, -0.8, ": " + suministrosObtStr, 0.01);
-	
+		if (BoolNext) {
+			if (!BoolWin) {
+				intPuntos++;
+				segundos -= 0.02;
+				texto->DrawText(-0.90, 0.85, "Puntuacion: " + puntosStr, 0.01);
+				texto->DrawText(0.3, -0.85, "Mision: Conseguir suministros", 0.01);
+			}
+			else {
+				texto->DrawText(-0.90, 0.85, "Puntuacion final: " + puntosStr, 0.01);
+				win->Draw(0, 0);
+				texto->DrawText(0.45, -0.85, "Gracias por tu ayuda!!", 0.01);
+			}
+			texto->DrawText(-0.9, 0.75, "Tiempo: " + texto->Time(segundos), 0.01);
+			
+			stringstream suministrosObt;
+			suministrosObt << intSuministrosObtenidos;
+			string suministrosObtStr = suministrosObt.str();
+			suministroGUI->Draw(-0.8, -0.8);
+			texto->DrawText(-0.66, -0.8, ": " + suministrosObtStr, 0.01);
 
+		}
+		else {
+			texto->DrawText(-0.5, 0.5, "Estas en un mundo que ha sido atacado por zombies", 0.01);
+			texto->DrawText(-0.5, 0.4, "ayudanos a conseguir 5 paquetes de municiones!!", 0.01);
+		}
+		Borde->Draw(0.0, 0.0);
 
 		swapChain->Present( 1, 0 );
 	}
