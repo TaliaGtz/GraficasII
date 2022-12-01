@@ -88,7 +88,7 @@ public:
 		CargaParametros(L"Assets/Terreno/agua.jpg",
 			L"Assets/Terreno/aguaNormal.png",
 			L"Assets/Terreno/aguaNormal.png",
-			L"Assets/Terreno/Terreno3.png", 100.0f); //Plano con lago
+			L"Assets/Terreno/Terreno3.png", 1000.0f); //Plano con lago
 	}
 
 	~Agua()
@@ -273,7 +273,7 @@ public:
 		d3dResult = D3DX11CreateShaderResourceViewFromFile(d3dDevice, diffuseTex, 0, 0, &colorMap, 0);
 		d3dResult = D3DX11CreateShaderResourceViewFromFile(d3dDevice, NormalTex, 0, 0, &colorMapN, 0);
 		d3dResult = D3DX11CreateShaderResourceViewFromFile(d3dDevice, SpecTex, 0, 0, &colorMapS, 0);
-		d3dResult = D3DX11CreateShaderResourceViewFromFile(d3dDevice, L"TextTerreno\\Agua\\waterA.png" , 0, 0, &colorMapA, 0);
+		d3dResult = D3DX11CreateShaderResourceViewFromFile(d3dDevice, L"Assets/Terreno/Terreno3.png" , 0, 0, &colorMapA, 0);
 
 		if (FAILED(d3dResult))
 		{
@@ -507,14 +507,14 @@ public:
 		D3DXMATRIX worldMat = rotationMat * translationMat;
 		D3DXMatrixTranspose(&worldMat, &worldMat);
 
-		lightDirF.x = lightDir[0];
+		/*lightDirF.x = lightDir[0];
 		lightDirF.y = lightDir[1];
 		lightDirF.z = lightDir[2];
 
 		lightColorF.w = lightColor[0];
 		lightColorF.x = lightColor[1];
 		lightColorF.y = lightColor[2];
-		lightColorF.z = lightColor[3];
+		lightColorF.z = lightColor[3];*/
 
 		//actualiza los buffers del shader
 		d3dContext->UpdateSubresource(worldCB, 0, 0, &worldMat, 0, 0);

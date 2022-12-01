@@ -367,3 +367,16 @@ TerrenoSkyBillModGC2 - 2/TerrenoSkyBillModGC2/v1dx11rr/x64/Debug/v1dx11rr.log
 TerrenoSkyBillModGC2 - 2/TerrenoSkyBillModGC2/v1dx11rr/x64/Debug/XACT3Util.obj
 *.cso
 *.exe
+*.filters
+TerrenoSkyBillModGC2 - 2/TerrenoSkyBillModGC2/v1dx11rr/x64/Debug/loadModel.obj
+*.recipe
+*.ilk
+*.enc
+*.tlog
+*.log
+*.lastbuildstate
+*.exe
+*.pdb
+*.cso
+*.enc
+*.db

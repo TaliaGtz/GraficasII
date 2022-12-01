@@ -160,9 +160,6 @@ public:
 		suministros3 = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Suministros/Suministros.obj", L"Assets/Modelos/Suministros/BaseColor.png", L"Assets/Modelos/Suministros/SumEspec.png", -53, 85 + moveZ);
 		suministros4 = new ModeloRR(d3dDevice, d3dContext, "Assets/Modelos/Suministros/Suministros.obj", L"Assets/Modelos/Suministros/BaseColor.png", L"Assets/Modelos/Suministros/SumEspec.png", 41, 121 + moveZ);
 
-		//camType = true;	//Primera persona = true
-
-
 		//GUI
 		gameover = new GUI(d3dDevice, d3dContext, 1, 1, L"Assets/UI/GameOverFin.png");
 		win = new GUI(d3dDevice, d3dContext, 1, 1, L"Assets/UI/Winner.png");
@@ -356,7 +353,7 @@ public:
 		skydome->Update(camara->vista, camara->proyeccion);
 		static float onda = 0.0;
 		onda += 0.01;
-		agua->Draw(camara->vista, camara->proyeccion, camara->posCam, onda, light->GetDirection(), light->GetDiffuseColor(), 150.0f, -9.0f, 150.1f);
+		agua->Draw(camara->vista, camara->proyeccion, camara->posCam, onda, light->GetDirection(), light->GetDiffuseColor(), 200.0f, -9.0f, 50.0f);
 
 		float camPosXZ[2] = { camara->posCam.x, camara->posCam.z };
 
@@ -816,6 +813,7 @@ public:
 			colisiones();
 			intPuntos = intPuntos - 1;
 		}
+
 
 
 		//Texto 
