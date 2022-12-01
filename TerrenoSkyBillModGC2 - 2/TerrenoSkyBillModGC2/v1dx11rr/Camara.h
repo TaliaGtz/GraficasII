@@ -38,8 +38,6 @@ public:
 		//posicion de la camara
 		posCam = eye;
 		posCam3P = eye;	//posición de la cámara en 3ra Persona
-		posCam3P.z += 15;
-		posCam3P.y += 1;
 		//a donde ve
 		hdveo = target;
 		refUp = up;

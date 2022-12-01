@@ -99,6 +99,7 @@ public:
 	CXACT3Util m_XACT3;
 
 	bool camType = true;
+	bool BoolWin = false;
 	float rotCam;
 	float escala = 10.0;
 	float extra = 0.2f;
@@ -720,7 +721,10 @@ public:
 
 		coche->setPosX(camara->hdveo.x);
 		coche->setPosZ(camara->hdveo.z);
-		coche->Draw(camara->vista, camara->proyeccion, terreno->Superficie(coche->getPosX(), coche->getPosZ()), camara->posCam, 1.0f, rotCam + XM_PI, 'Y', 2.5 + extra, camType, true);
+		if(camType) {
+			coche->Draw(camara->vista, camara->proyeccion, terreno->Superficie(coche->getPosX(), coche->getPosZ()), camara->posCam, 1.0f, rotCam + XM_PI, 'Y', 2.5 + extra, camType, true);
+		}
+		
 		zombi->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 0.7 + extra, camType, false);
 		casa->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', escala + extra, camType, false);
 		casa2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', escala + extra, camType, false);
@@ -735,40 +739,40 @@ public:
 			suministros->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 50, camara->posCam, 10.0f, 0, 'A', 1, camType, false);
 		}
 		else {
-			suministros->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camType, false);
+			suministros->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) + 3, camara->posCam, 10.0f, segundos, 'Y', 1, camType, false);
 		}
 		// Suministro 1
 		if (ColisionesSuministros[1]) {
 			suministros1->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 50, camara->posCam, 10.0f, 0, 'A', 1, camType, false);
 		}
 		else {
-			suministros1->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camType, false);
+			suministros1->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) + 3, camara->posCam, 10.0f, segundos, 'Y', 1, camType, false);
 		}
 		// Suministro 2
 		if (ColisionesSuministros[2]) {
 			suministros2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) -50, camara->posCam, 10.0f, 0, 'A', 1, camType, false);
 		}
 		else {
-			suministros2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camType, false);
+			suministros2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) + 3, camara->posCam, 10.0f, segundos, 'Y', 1, camType, false);
 		}
 		// Suministro 3
 		if (ColisionesSuministros[3]) {
 			suministros3->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) - 50, camara->posCam, 10.0f, 0, 'A', 1, camType, false);
 		}
 		else {
-			suministros3->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camType, false);
+			suministros3->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) + 3, camara->posCam, 10.0f, segundos, 'Y', 1, camType, false);
 		}
 		// Suministro 4
 		if (ColisionesSuministros[4]) {
 			suministros4->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20)-50, camara->posCam, 10.0f, 0, 'A', 1, camType, false);
 		}
 		else {
-			suministros4->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camType, false);
+			suministros4->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) + 3, camara->posCam, 10.0f, segundos, 'Y', 1, camType, false);
 		}
 
 	
 		// Colisiones con los suministros
-		if ((isPointInsideSphere(coche->getPos(), suministros->getSphere(9))) && !ColisionesSuministros[0]) {
+		if ((isPointInsideSphere(coche->getPos(), suministros->getSphere(12))) && !ColisionesSuministros[0]) {
 			colisiones();
 			intPuntos= intPuntos + 1500;	
 			intSuministrosObtenidos++;
@@ -776,7 +780,7 @@ public:
 			segundos += 0.05;
 		}
 		
-		if ((isPointInsideSphere(coche->getPos(), suministros1->getSphere(9))) && !ColisionesSuministros[1]) {
+		if ((isPointInsideSphere(coche->getPos(), suministros1->getSphere(12))) && !ColisionesSuministros[1]) {
 			colisiones();
 			intPuntos = intPuntos + 1500;
 			intSuministrosObtenidos++;
@@ -784,21 +788,21 @@ public:
 			segundos += 0.05;
 		}
 	
-		if ((isPointInsideSphere(coche->getPos(), suministros2->getSphere(9))) && !ColisionesSuministros[2]) {
+		if ((isPointInsideSphere(coche->getPos(), suministros2->getSphere(12))) && !ColisionesSuministros[2]) {
 			colisiones();
 			intPuntos = intPuntos + 1500;
 			intSuministrosObtenidos++;
 			ColisionesSuministros[2] = true;
 			segundos += 0.05;
 		}
-		if ((isPointInsideSphere(coche->getPos(), suministros3->getSphere(9))) && !ColisionesSuministros[3]) {
+		if ((isPointInsideSphere(coche->getPos(), suministros3->getSphere(12))) && !ColisionesSuministros[3]) {
 			colisiones();
 			intPuntos = intPuntos + 1500;
 			intSuministrosObtenidos++;
 			ColisionesSuministros[3] = true;
 			segundos += 0.05;
 		}
-		if ((isPointInsideSphere(coche->getPos(), suministros4->getSphere(9))) && !ColisionesSuministros[4]) {
+		if ((isPointInsideSphere(coche->getPos(), suministros4->getSphere(12))) && !ColisionesSuministros[4]) {
 			
 			colisiones();
 			intPuntos = intPuntos + 1500;
@@ -812,19 +816,28 @@ public:
 		puntos << intPuntos;
 		string puntosStr = puntos.str();
 
-		intPuntos++;
+	
 		TurnOnAlphaBlending();
 		//GUI
-		texto->DrawText(-0.9, 0.9, "Puntuacion: " + puntosStr, 0.01);
+		if (!BoolWin) {
+			intPuntos++;
+			segundos -= 0.005;
+			texto->DrawText(-0.9, 0.9, "Puntuacion: " + puntosStr, 0.01);
+		}
+		else {
+			texto->DrawText(-0.9, 0.9, "Puntuacion final: " + puntosStr, 0.01);
+			win->Draw(0, 0);
+		}
+	
 		texto->DrawText(-0.9, 0.8, "Tiempo: " + texto->Time(segundos), 0.01);
 
 		if (segundos <= 0 && intSuministrosObtenidos < 5) {
 			gameover->Draw(0, 0);
 		}
-		if (intSuministrosObtenidos >= 5) {
-			win->Draw(0, 0);
+		if (intSuministrosObtenidos >= 5 && !BoolWin) {
+			BoolWin = true;
 		}
-		segundos -= 0.005;
+		
 	
 
 
